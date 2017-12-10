@@ -1,7 +1,7 @@
 <!--pages/me/me.wxml-->
 <view class="page">
   <view class="userinfo" style="background-color: #0093dc">
-    <image  class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
   <view class="page__bd">
@@ -18,7 +18,7 @@
       </navigator>
     </view>
 
-    
+
     <view class="weui-cells__title"></view>
 
     <view class="weui-cells weui-cells_after-title">
