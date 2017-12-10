@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/me/me",
     "pages/apps/apps",
-    "pages/map/map"
+    "pages/map/map",
+    "pages/introduce/introduce"
   ],
   "window": {
     "backgroundTextStyle": "light",
