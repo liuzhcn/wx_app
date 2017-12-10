@@ -3,6 +3,9 @@
   <view class="page__hd" style="background-color: #0093dc">
     <image  class="userinfo-avatar" src="{{userInfo.avatarUrl}}" ></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  <view class="userinfo" style="background-color: #0093dc">
+    <image  class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
   <view class="page__bd">
 

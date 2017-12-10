@@ -12,12 +12,15 @@
   </view>
 </view>
 -->
-<view class='page'>
-  <navigator>
-   <button>学校概况</button>
+<view style='height:100%'>
+<image src='/images/start.jpg'  style='width:100%;height:1150rpx'>
+<image src='/images/logo.png' mode='widthFix' style="position:absolute;margin:auto;top:50px;left:0px;right:0px;"></image> 
+  <navigator style="position:absolute;margin:auto;top:180px;left:60px;right:60px;">
+   <button style='opacity:0.6;'>学校概况</button>
   </navigator>
-  <navigator url="/pages/map/map">
-   <button>校园导览</button>
+  <navigator url="/pages/map/map" 
+  style="position:absolute;margin:auto;top:250px;left:60px;right:60px;">
+   <button style='opacity:0.6;'>校园导览</button>
   </navigator>
-  
+</image>
 </view>
