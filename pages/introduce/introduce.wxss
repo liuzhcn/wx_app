@@ -9,6 +9,9 @@ page,
     padding-bottom: 0;
 }
 .weui-tab__content{
-    padding-top: 60px;
-    text-align: center;
+    text-align: left;
+}
+
+.weui-navbar__item.weui-bar__item_on {
+    color:#0093dc;
 }

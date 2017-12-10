@@ -8,13 +8,321 @@
                         <view class="weui-navbar__title">{{item}}</view>
                     </view>
                 </block>
-                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px); background-color:#0093dc"></view>
             </view>
-            <view class="weui-tab__panel">
-                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">选项一的内容</view>
-                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">选项二的内容</view>
-                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">选项三的内容</view>
-            </view>
+            <scroll-view class="weui-tab__panel" style='height:100%;' scroll-y>
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+
+                    <view class="weui-article">
+                        <view class="weui-article__h1">华中师范大学简介</view>
+                        <view class="weui-article__section">
+
+
+                            <view class="weui-article__p">　　华中师范大学位于九省通衢的湖北省武汉市，坐落在武昌南湖之滨的桂子山上，占地面积120余万平方米，是教育部直属重点综合性师范大学，国家“211工程”重点建设大学，国家教师教育“985”优势学科创新平台建设高校，是国家培养中、高等学校师资和其他高级专门人才的重要基地。
+                            </view>
+
+
+
+                            <view class="weui-article__p">　　 学校办学历史悠久，是在1903年创办的文华书院大学部（始于1871年创办的文华书院，1924年改名为华中大学）、1912年创办的中华大学、1949年创办的中原大学教育学院的基础上，1951年组建公立华中大学，1952年改制为华中高等师范学校，1953年定名为华中师范学院，1985年更名为华中师范大学，并由中原大学创始人之一邓小平同志亲笔题写校名。1993年江泽民同志为学校九十周年校庆题词：“发展师范教育事业，提高民族文化素质”。学校在百余年的发展中既继承了中国传统文化的精华，又汲取了外来文化的养分，更弘扬了革命文化教育的传统，形成了“忠诚博雅、朴实刚毅”的华师精神，为国家培养了30多万优秀人才。
+                            </view>
+
+                            <view class="weui-article__p">　　 学校下设30个学院，70个本科专业面向全国招生，具备从本科生到硕士生、博士生及博士后，从全日制到成人教育的高等教育体系。目前各类全日制在校生近32000人，其中本科生近18000人，研究生11000多人，留学生2900多人。现有教职工3800余人，专任教师1966人，其中教授、副教授1293人，博士生导师397人，专兼职院士、人文社会科学资深教授、“长江学者”特聘教授、“国家教学名师”、“千人计划”入选者、国家杰出青年科学基金获得者等各类国家级人才40人。
+                            </view>
+
+                            <view class="weui-article__p">　　 学校现有国家重点学科8个，国家重点（培育）学科1个，湖北省一级重点学科22个，中国语言文学和物理学等15个专业设有博士后流动站，有14个博士学位授权一级学科，32个硕士学位授权一级学科，92个博士学位授权学科专业，178个硕士学位授权学科专业。
+                            </view>
+                            <view class="weui-article__p">　　 学校现有各类科研机构、实验室、研究院（所、中心）60余个，其中教育部人文社会科学重点研究基地3个(中国近代史研究所、中国农村研究院、语言与语言教育研究中心)，文化部“国家文化产业研究中心”、国务院农村综合改革工作小组办公室“中国农村综合改革创新研究中心”等其他部委社科重点研究基地6个，首批“中国智库来源索引”（CTTI）2个（中国农村研究院与长江教育研究院），省级重点研究基地13个。此外，学校拥有国家工程实验室1个（教育大数据应用技术），国家工程技术研究中心1个（数字化学习)，国家级国际联合研究中心1个(夸克物质及探测技术)，国家语言资源监测与研究网络媒体中心1个，教育部重点实验室3个（农药与化学生物学、夸克与轻子物理、青少年网络心理与行为），教育部工程技术研究中心1个（教育信息技术），教育部战略研究基地1个（教育信息化），学科创新引智基地3个（教育数字媒体与可视化、夸克物质物理、绿色农药与合成化学）以及各类省级重点研究基地10个。
+                            </view>
+                            <view class="weui-article__p">　　 “十二五”期间，学校科研经费快速增长，项目经费总量突破10亿。人文社会科学研究方面，国家社会科学基金项目总数、重大招标项目数排名稳定在全国高校前10位，教育部年度项目近10年立项总数排名全国第一，近五年保持全国排名前三。高等学校人文社会科学奖获奖总数，连续三届位于全国高校前10位。湖北省社会科学优秀成果奖获奖数，连续五届位居湖北高校前2位。自然科学方面实现973项目首席、国家创新群体、国家级研究基地等突破，累计发表SCI论文3000余篇，在Science、PNAS、PRL、JACS等有关学科高水平代表期刊上发表论文30多篇。累计获得湖北省科技奖励19项，其中自然科学奖一等奖3项、科技进步奖一等奖1项。
+                            </view>
+                            <view class="weui-article__p">　　 学校努力体现“厚基础、宽口径、高素质、创新型”的现代人才培养思想，通识教育与专业教育相结合,学生全面发展和个性发展有机结合。学校现有国家文理科基础学科人才培养和科学研究基地2个（历史学、物理学），国家级特色专业12个，湖北省品牌专业17个，是教育部卓越教师培养计划高校和教育部信息化试点高校。毕业生以过硬的思想素质、良好的业务素质以及全面的综合素质赢得了用人单位的青睐，就业率稳定在90%以上。2013年，教育部对学校进行本科教学工作审核评估，办学方向和办学质量得到充分肯定。
+                            </view>
+                            <view class="weui-article__p">　　 多年来，学校形成了“博学、博爱、博雅”的“三博”校园文化，近150多个学生社团活跃其中，“创新杯科学文化节”“树人杯艺术文化节”“博雅大讲堂”“一二·九诗歌散文大赛”“桂苑之歌”等成为我校传统的校园文化活动，在武汉乃至全国产生了较大影响，为学生成长成才提供了广阔舞台。学校实现了校园无线网络及学生宿舍空调全覆盖，图书馆馆藏面积39689平方米，藏书300余万册，并具有先进的“校园文献网络化管理与服务系统”，为学生学习生活提供了有力保障。
+                            </view>
+                            <view class="weui-article__p">　　 学校积极开展对外学术、科技和文化交流，国际化水平位居全国高校第22位。先后与美国、俄罗斯、加拿大、法国、英国、澳大利亚、日本、韩国等70多个国家和地区的100多所高校及科研机构建立了密切的学术联系，大批外籍专家和教师在校任教讲学。出国（境）研修、参加国际会议、开展合作科研的教师人数持续攀升。与国外大学共建四所孔子学院，积极选派汉语教师及志愿者赴国外开展汉语教学，传播中国语言与文化。大力推动学生的国际双向流动，每年选派大批学生赴国（境）外交流学习，在校长短期的国际学生来自全球140多个国家和地区。
+                            </view>
+                            <view class="weui-article__p">　　 目前，全体华中师大人正以昂扬的斗志，为争取把学校建设成为教师教育特色鲜明的研究型高水平大学而努力奋斗！
+                            </view>
+
+                        </view>
+                    </view>
+                </view>
+
+
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                    <view class="weui-article">
+                        <view class="weui-article__h1">华中师范大学校史</view>
+                        <view class="weui-article__section">　　 悠悠岁月，赫赫史册。华中师范大学已经走过了110多年的历史，抚今思昔，追根溯源，奋进在新时期的前沿，华中师范大学倍加珍视自己的历史传承。
+                        </view>
+                        <view class="weui-article__section">　　 华中师范大学是教育部直属的一所重点综合性高等学府。追溯其根由，她以1871年的文华书院为源头，以1903年文华书院所设立的大学部为起点，以1924年在文华大学基础上建立的华中大学为主体，以华中大学、中华大学、中原大学教育学院等多元结合为前身。1951年中原大学教育学院与华中大学合并组建成公立华中大学；1952年中华大学、湖北教育学院等并入后，学校改名为华中高等师范学校，1953年定名为华中师范学院，1985年学校更名为华中师范大学，并由中原大学创始人之一邓小平同志亲笔题写校名。
+                        </view>
+                        <view class="weui-article__section">　 在整整一个多世纪的办学历程中，学校在时代的风雨中兼程，在历史的嬗变中新生，在建国后的曲折中前进，在新时期的改革中发展，而今又在实现新世纪转型中的跨越。华中师范大学的历史和辉煌，从一个侧面反映出中国近现代高等教育曲折而辉煌的发展历程。（2017年6月19日更新）
+                        </view>
+                        <view class="weui-article__section" style='text-align:center;'>
+                            <view class="weui-article__p" style='display: flex; flex-flow: column;'>
+                                <image mode='aspectFit' style='height:180px;' src='http://www.ccnu.edu.cn/__local/B/37/2E/009753D710366769E39DC266B2C_CAE2AAC3_7697.jpg'></image>
+                                <text style='font-size:12px;'>华中大学校长韦卓民</text>
+                            </view>
+
+                            <view class="weui-article__p" style='display: flex;flex-flow: column;'>
+                                <image mode='aspectFit' style='height:180px;' src='http://www.ccnu.edu.cn/__local/2/5B/66/602EFAD1746023853F369F6BE22_769689A4_3D94B.png'></image>
+                                <text style='font-size:12px;'>文华大学校门</text>
+                            </view>
+
+                            <view class="weui-article__p" style='display: flex;flex-flow: column;'>
+                                <image mode='aspectFit' style='height:180px' src='http://www.ccnu.edu.cn/__local/D/1B/5C/DC9B7BCDA523F5EFB2CD315F7C1_F1B2133D_10640.jpg'></image>
+                                <text style='font-size:12px;'>华中大学校门</text>
+                            </view>
+                            <view class="weui-article__p" style='display: flex;flex-flow: column;'>
+                                <image mode='aspectFit' style='height:180px' src='http://www.ccnu.edu.cn/__local/C/A3/05/5BF7AF39A852BC3D0102409F9DB_B31090E9_11F63.jpg'></image>
+                                <text style='font-size:12px;'>中华大学校门</text>
+                            </view>
+
+                            <view class="weui-article__p" style='display: flex;flex-flow: column;'>
+                                <image mode='aspectFit' style='height:180px' src='http://www.ccnu.edu.cn/__local/C/BC/B1/EE4813FA09DC2FA09919F90230F_0626CB06_2FE00.jpg'></image>
+                                <text style='font-size:12px;'>中原大学校门</text>
+                            </view>
+
+                            <view class="weui-article__p" style='display: flex;flex-flow: column;'>
+                                <image mode='aspectFit' style='height:180px' src='http://www.ccnu.edu.cn/__local/E/92/F2/6BAEEABA2FBC2F1C76EE9A78F8C_B924AB08_1B21F.jpg'></image>
+                                <text style='font-size:12px;'> 更名为华中师范大学后的校门</text>
+                            </view>
+
+                            <view class="weui-article__p" style='display: flex;flex-flow: column;'>
+                                <image mode='widthFix' style='width:100%' src='http://www.ccnu.edu.cn/__local/7/8A/5C/F12812CA0AB3AAFF05E123B80A3_F0960F80_137C2.png'></image>
+                                <text style='font-size:12px;'>华中师范大学校史变迁示意图</text>
+                            </view>
+
+                        </view>
+                    </view>
+                </view>
+
+
+                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+                    <view class="weui-panel weui-panel_access">
+                        <view class="weui-panel__hd">党委书记</view>
+                        <view class="weui-panel__bd">
+                            <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                                    <image class="weui-media-box__thumb" mode='widthFix' src="http://www.ccnu.edu.cn/__local/A/36/20/C3423117F141BD5A951283C43E0_07799C39_2D622.jpg" />
+                                </view>
+                                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                                    <view class="weui-media-box__title">黄晓玫</view>
+                                    <view class="weui-media-box__desc">女，汉族，1963年10月出生，湖北襄阳人，硕士研究生学历，法学硕士，研究员。1985年6月加入中国共产党。</view>
+                                </view>
+                            </navigator>
+                        </view>
+                    </view>
+
+                    <view class="weui-panel weui-panel_access">
+                        <view class="weui-panel__hd">校长</view>
+                        <view class="weui-panel__bd">
+                            <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                                    <image class="weui-media-box__thumb" mode='widthFix' src="http://www.ccnu.edu.cn/__local/2/D1/FC/75330284F056C740499AE75852F_A21CF2A9_1F64B.jpg" />
+                                </view>
+                                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                                    <view class="weui-media-box__title">杨宗凯</view>
+                                    <view class="weui-media-box__desc">男，1963年10月出生，汉族，祖籍河南。中共党员，教授、博士生导师。1985年毕业于华中理工大学无线电系,</view>
+                                </view>
+                            </navigator>
+                        </view>
+                    </view>
+
+                    <view class="weui-panel weui-panel_access">
+                        <view class="weui-panel__hd">党委副书记</view>
+                        <view class="weui-panel__bd">
+                            <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                                    <image class="weui-media-box__thumb" mode='widthFix' src="http://www.ccnu.edu.cn/__local/A/49/B8/743C85E7A64C4B6497023155D76_6617079A_1D4A7.jpg" />
+                                </view>
+                                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                                    <view class="weui-media-box__title">覃红</view>
+                                    <view class="weui-media-box__desc">男，1966年8月出生，土家族，湖北长阳人。中共党员，教授，博士，博士生导师。1988年毕业于华中师范大学数学系</view>
+                                </view>
+                            </navigator>
+                            <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                                    <image class="weui-media-box__thumb" mode='widthFix' src="http://www.ccnu.edu.cn/__local/C/DB/9A/4EEA5C755C2FE7621C6FAB934EC_B23C09F7_16FD7.jpg" />
+                                </view>
+                                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                                    <view class="weui-media-box__title">骆军</view>
+                                    <view class="weui-media-box__desc">骆军，男，汉族，1969年10月出生，湖北宜城人，博士研究生学历，法学博士，研究员。1990年11月加入中国共产党，</view>
+                                </view>
+                            </navigator>
+                        </view>
+
+                    </view>
+
+                    <view class="weui-panel weui-panel_access">
+                        <view class="weui-panel__hd">副校长</view>
+                        <view class="weui-panel__bd">
+                            <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                                    <image class="weui-media-box__thumb" mode='widthFix' src="http://www.ccnu.edu.cn/__local/F/95/05/ACB6D8805767DD02A54C619F4FD_4C34E6DA_BC32.jpg" />
+                                </view>
+                                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                                    <view class="weui-media-box__title">蔡红生</view>
+                                    <view class="weui-media-box__desc">男，1959年出生，湖北省武汉人，中共党员，法学博士，华中师范大学党委常委、副校长、研究员，博士生导师。</view>
+                                </view>
+                            </navigator>
+                            <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                                    <image class="weui-media-box__thumb" mode='widthFix' src="http://www.ccnu.edu.cn/__local/D/97/1B/50CD1C4891E7C291F78674BF77E_BCE6779E_1E306.jpg" />
+                                </view>
+                                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                                    <view class="weui-media-box__title">王恩科</view>
+                                    <view class="weui-media-box__desc">男，汉族，1963年出生于湖北公安，华中师范大学教授，博士生导师。1985起，在华中师范大学粒子物理研究所攻读硕士、博士学位，</view>
+                                </view>
+                            </navigator>
+                            <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                                    <image class="weui-media-box__thumb" mode='widthFix' src="http://www.ccnu.edu.cn/__local/4/AC/24/5EE6EDBDA8EAE0C2C7677274C46_C8B5C51E_16967.jpg" />
+                                </view>
+                                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                                    <view class="weui-media-box__title">彭南生</view>
+                                    <view class="weui-media-box__desc">男，汉族，1963年10月出生，湖北黄陂人，博士研究生学历，历史学博士，博士生导师。现为湖北省“楚天学者”特聘教授，华中师范大学“桂子学者”特聘教授，</view>
+                                </view>
+                            </navigator>
+                            <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                                    <image class="weui-media-box__thumb" mode='widthFix' src="http://www.ccnu.edu.cn/__local/6/93/0C/10B73BE1942F4411762F76CAEE5_DE4EC9C6_26BD5.jpg" />
+                                </view>
+                                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                                    <view class="weui-media-box__title">夏立新</view>
+                                    <view class="weui-media-box__desc">夏立新，男，汉族，1968年8月出生，湖北武汉人，博士研究生学历，管理学博士，教授、博士生导师。</view>
+                                </view>
+                            </navigator>
+                        </view>
+
+                    </view>
+
+                    <view class="weui-panel weui-panel_access">
+                        <view class="weui-panel__hd">校长助理</view>
+                        <view class="weui-panel__bd">
+                            <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                                    <image class="weui-media-box__thumb" mode='widthFix' src="http://www.ccnu.edu.cn/__local/A/14/7E/727AA2CCDC9B6A5FF3187C41048_52D66746_15BE0.jpg" />
+                                </view>
+                                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                                    <view class="weui-media-box__title">林更茂</view>
+                                    <view class="weui-media-box__desc">男，汉族，1970年2月出生，湖北新洲人。中共党员，博士研究生学历，研究员。现任校长助理，兼纪委副书记、监察处处长。</view>
+                                </view>
+                            </navigator>
+                            <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                                    <image class="weui-media-box__thumb" mode='widthFix' src="http://www.ccnu.edu.cn/__local/0/65/B8/495EB40B065EF11319D84531E7A_483CA162_3E69.jpg" />
+                                </view>
+                                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                                    <view class="weui-media-box__title">任友洲</view>
+                                    <view class="weui-media-box__desc">任友洲，男，汉族，1964年10月5日出生，湖南南县人，研究生学历，研究员。1988年6月华中师范大学化学系本科专业毕业，本科学历，理学学士学位，</view>
+                                </view>
+                            </navigator>
+                        </view>
+
+                    </view>
+                </view>
+
+
+
+
+                <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+                    <view class="weui-article">
+                       
+                        <view class="weui-article__section">
+                            <view class="weui-article__h1">校名</view>
+                            <view class="weui-article__section">
+                                
+                                <view class="weui-article__p">
+                                   华中师范大学是在1903年创办的文华书院大学部（始于1871年创办的文华书院，1924年改名为华中大学）、1912年创办的中华大学、1949年创办的中原大学教育学院的基础上，1951年组建公立华中大学，1952年改制为华中高等师范学校，1953年定名为华中师范学院，1985年学校更名为华中师范大学。同年11月20日，邓小平同志应邀为我校题写“华中师范大学”校名。
+                                </view>
+                                <view class="weui-article__p">
+                                    <image class="weui-article__img" src="http://www.ccnu.edu.cn/__local/D/BF/7F/E13D2FCC39EC7FDF12582E3298E_B54B2C8C_3F8F5.png" mode="aspectFit" style="height: 180px" />
+                                </view>
+                            </view>
+                           
+                        </view>
+
+                        <view class="weui-article__section">
+                            <view class="weui-article__h1">校徽</view>
+                            <view class="weui-article__section">
+                                
+                                <view class="weui-article__p">
+                                华中师范大学校徽十分简洁，以青绿为底色，暗喻青绿色的美丽校园。外层同心圆包裹着邓小平同志为学校题写的校名和学校的英文全称“Central China Normal University”，内层实心圆形反衬的白色篆书“华大”二字，既是学校简称，又暗含学校前身之一的“华中大学”之名。校徽中“华”字似学校建筑，“大”字既像单人独立、又如莘莘学子背靠建筑稍作休憩。整体风格明快活泼，隐有生机。
+                                </view>
+                                <view class="weui-article__p">
+                                    <image class="weui-article__img" src="http://www.ccnu.edu.cn/__local/7/B7/24/0EA1E510D6F171BBEA51CFF88E8_A12ECAAB_5EDF.jpg" mode="aspectFit" style="height: 180px" />
+                                </view>
+                            </view>
+                           
+                        </view>
+
+                        <view class="weui-article__section">
+                            <view class="weui-article__h1">校庆</view>
+                            <view class="weui-article__section">
+                                
+                                <view class="weui-article__p">
+                                 《华中师范大学章程》第一章第十二条规定学校校庆日为每年10月2日。2013年10月2日，学校举办110周年校庆庆典。
+                                </view>
+                             
+                            </view>
+                           
+                        </view>
+
+                        <view class="weui-article__section">
+                            <view class="weui-article__h1">校训</view>
+                            <view class="weui-article__section">
+                                <view class="weui-article__h2">求实创新  立德树人</view>
+                                <view class="weui-article__p">
+                                华中师范大学主要有三个前身：华中大学、中华大学、中原大学教育学院。自学校创立，华中大学一直秉持“立足本土文化、放眼人类文明”的教育理念；中华大学坚持“成德、达材、独立、进取”的治校准则；中原大学教育学院则坚持“忠诚党的教育事业”的崇高信念。
+                                </view>
+                                <view class="weui-article__p">
+   建国初期，学校依据自身师范的定位，制定了“忠诚、奋发、博学、乐育”八字校训，以此统摄办学思想，规范育人行为。在几十年的办学中，学校一直倡导“尊师爱生”、“为人师表”。学校在筹备建校90周年校庆活动中，制定了“求实创新、为人师表”的新校训，1998年修订为“求实创新、立德树人”。
+                                </view>
+                                <view class="weui-article__p">
+   惟求实而可以创新，惟立德方能树人。八字校训是学校精神的灵魂，体现了华师的办学传统和文化的积淀，代表着人才培养的教育理念，也是面向社会的精神标志。校训的提出意在激励和劝勉在校的教师和学子，使之朝踏实、新颖、有德、成人的方向成长和发展，毕业多年的校友也会铭记于心。
+                                </view>
+                               
+                            </view>
+                           
+                        </view>
+
+                        <view class="weui-article__section">
+                            <view class="weui-article__h1">华大精神</view>
+                            <view class="weui-article__section">
+                                <view class="weui-article__h2">忠诚博雅 朴实刚毅</view>
+                                <view class="weui-article__p">
+                                   2003年百年校庆时，在充分讨论、集思广益取得共识的基础上，将华师精神提炼凝结为“忠诚博雅、朴实刚毅”八个字。它是一种有形的规范和无形的魅力，凡是华师的学子和校友都从中无不感受到与自己的一种情感上的维系与观照，从学缘上寻找到一种属于自己的思想源泉与学识依托。它除了包含严谨求实的科学精神，广博高雅的人文精神，自强不息的奋斗精神，为人师表的重德精神，立德树人的育才精神，海纳百川的兼容精神之外，还有全面发展的博学精神，不断开拓的创新精神，温暖人心的博爱精神等等。
+                                </view>
+                                <view class="weui-article__p">
+   忠诚博雅：忠心而致诚，博大而高雅。它显示了一种修养、气质和精神境界，意味着博采众长、兼容并包。从过去的“又红又专、能文能武”到今天的“品学兼优、德才兼备”，乃至德、智、体、美全面发展，意味着志趣高雅、风格高尚、气质不俗。它是华师人独特的个性。
+                                </view>
+                                <view class="weui-article__p">
+   朴实刚毅：质朴而坚实，刚强而弘毅。体现的同样是一种品质、修养，讲究的是一种气度和内在的阳刚之美。“朴实”是对华师人淳朴、实在、踏实等品质的概括；“刚毅”则反映了华师人自强不息、奋发有为，在困难和逆境中不屈不挠、开拓进取的毅力和精神。一方面不事张扬，踏实做事；一方面持之以恒，有所作为，正是华师人百年来一以贯之的传统，并体现在学校的人才培养中。
+   华师校训与华师精神作为华师人的群体意识、人格共性，在不断闪耀着光辉；作为华师人的精神力量和理想追求，在新的世纪发扬光大。 
+                                </view>
+                               
+                            </view>
+                           
+                        </view>
+
+                        <view class="weui-article__section">
+                            <view class="weui-article__h1">校歌</view>
+                            <view class="weui-article__section">
+                                
+                        
+                                <view class="weui-article__p">
+                                    <image class="weui-article__img" src="http://www.ccnu.edu.cn/__local/F/EA/6F/3789600B7339903DB9E07CD0979_56AC765B_D00A.jpg" mode="widthFix" style="width:100%" />
+                                </view>
+                            </view>
+                           
+                        </view>
+
+                        
+                    </view>
+
+                </view>
+            </scroll-view>
         </view>
     </view>
 </view>

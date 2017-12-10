@@ -9,7 +9,7 @@ Page({
    */
   data: {
       tabs:["学校介绍","百年校史","现任领导","华大标识"],
-      activeIndex : 1,
+      activeIndex : 0,
       sliderOffset : 0,
       sliderLeft : 0
 
