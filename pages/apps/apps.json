@@ -1,1 +1,6 @@
-{}
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#0093dc",
+  "navigationBarTitleText": "校园服务",
+  "navigationBarTextStyle": "white"
+}
