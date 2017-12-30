@@ -5,7 +5,9 @@
     "pages/me/me",
     "pages/apps/apps",
     "pages/map/map",
-    "pages/introduce/introduce"
+    "pages/introduce/introduce",
+    "pages/regist/regist",
+    "pages/activity/samll_target"
   ],
   "window": {
     "backgroundTextStyle": "light",
