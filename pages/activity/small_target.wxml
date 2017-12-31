@@ -1,0 +1,57 @@
+<view style='height:100%;background-image:url()'>
+    <view style='height:300rpx;display:flex;flex-direction:row-reverse'>
+        <image src='http://www.sibetech.cn/ggeg/static/images/small_target/title.png' style='height:300rpx;width:300rpx'></image>
+    </view>
+    <view style='height:500rpx;width:100%'>
+        <scroll-view scroll-x class='scroll-x'>
+            <view style='height:500rpx;width:500rpx;display: inline-block'>
+                <view class="userinfo" style="background-color: white">
+                    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+                    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+                </view>
+                <view style="background-color: white" class="content">
+                    <view style="height:250rpx;width:90%;white-space:pre-line">2018年，我要对心中的TA说出一直没有说的话,立此为据，请大家见证！</view>
+                    <view style='width:90%;height:40rpx;display:flex;flex-direction:row-reverse;font-size:14px'>
+                    <image src='/images/good.png' style='height:16px;width:16px;margin-left:5px' data-number='10' bindtap='testTap'></image><span>12345</span>
+                    </view>
+                </view>
+
+            </view>
+            <view style='height:500rpx;width:500rpx;display: inline-block'>
+                <view class="userinfo" style="background-color: white">
+                    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+                    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+                </view>
+                <view style="background-color: white" class="content">
+                    <view style="height:250rpx;width:90%;white-space:pre-line">2018年，我要对心中的TA说出一直没有说的话,立此为据，请大家见证！</view>
+                    <view style='width:90%;height:40rpx;display:flex;flex-direction:row-reverse;font-size:14px'>
+                    <image src='/images/good.png' style='height:16px;width:16px;margin-left:5px' data-number='10' bindtap='testTap'></image><span>12345</span>
+                    </view>
+                </view>
+
+            </view>
+            <view style='height:500rpx;width:500rpx;display: inline-block'>
+                <view class="userinfo" style="background-color: white">
+                    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+                    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+                </view>
+                <view style="background-color: white" class="content">
+                    <view style="height:250rpx;width:90%;white-space:pre-line">2018年，我要对心中的TA说出一直没有说的话,立此为据，请大家见证！</view>
+                    <view style='width:90%;height:40rpx;display:flex;flex-direction:row-reverse;font-size:14px'>
+                    <image src='/images/good.png' style='height:16px;width:16px;margin-left:5px' data-number='10' bindtap='testTap'></image><span>12345</span>
+                    </view>
+                </view>
+
+            </view>
+            
+           
+
+        </scroll-view>
+
+    </view>
+    <view style='height:400rpx;display:flex;flex-direction:column;align-items:center'>
+    <view style='margin-top:50rpx'>目前，共有<font style="font-weight:bold;font-size:24px">123435</font>个小目标树立</view>
+    <button class='weui-btn' style='background-color:#0093dc;color:white'>我也去立一个小目标</button>
+    </view>
+
+</view>
