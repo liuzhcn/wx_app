@@ -1,2 +1,2 @@
 <!--pages/regist/regist.wxml-->
-<web-view src="http://account.ccnu.edu.cn/cas/login"></web-view>
+<web-view src="http://wxapp.ccnu.edu.cn/wxapp/cas/login"></web-view>
