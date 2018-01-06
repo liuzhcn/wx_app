@@ -34,8 +34,8 @@
             {
                 "pagePath": "pages/activity/small_target",
                 "text": "校园活动",
-                "iconPath": "images/app.png",
-                "selectedIconPath": "images/app_selected.png"
+                "iconPath": "images/activity.png",
+                "selectedIconPath": "images/activity_selected.png"
             },
             {
                 "pagePath": "pages/me/me",
