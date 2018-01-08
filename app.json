@@ -8,7 +8,10 @@
         "pages/introduce/introduce",
         "pages/regist/regist",
         "pages/activity/small_target",
-        "pages/activity/test"
+        "pages/activity/test",
+        "pages/phone/phone",
+        "pages/phoneList/phoneList",
+        "pages/phoneDetail/phoneDetail"
     ],
     "window": {
         "backgroundTextStyle": "light",

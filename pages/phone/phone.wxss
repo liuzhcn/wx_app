@@ -1,0 +1,43 @@
+.logo_view{
+  width: 100%;
+  height: 300rpx;
+ 
+}
+.logo_view_view{
+  width: 300rpx;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 100rpx;
+}
+.img_logo{
+  width: 200rpx;
+  height: 200rpx;
+}
+.logo_text{
+  text-align: center;
+}
+.img_more{
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+.img_lock{
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.fontSize{
+  font-size: 14px;
+}
+.cell_bottom:before {
+content:" ";
+position:absolute;
+left:15px;
+top:0;
+right:0;
+height:1px;
+border-top:1rpx solid #d9d9d9;
+color:#d9d9d9;
+}

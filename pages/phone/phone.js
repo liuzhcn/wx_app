@@ -1,33 +1,13 @@
-// pages/apps/apps.js
+// pages/phone/phone.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    grids: [
-      {
-        "name":"校园卡",
-        "icon":"/images/card.png"
-      },
-      {
-        "name":"通讯录",
-        "icon": "/images/addressbook.png",
-        "url": "/pages/phone/phone"
-      },
-      {
-        "name":"看通知",
-        "icon": "/images/notice.png"
-        
-      },
-      {
-        "name":"查图书",
-        "icon": "/images/book.png"
-      }
-
-    ]
+  
   },
-
+  
   /**
    * 生命周期函数--监听页面加载
    */
@@ -39,7 +19,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    
   },
 
   /**

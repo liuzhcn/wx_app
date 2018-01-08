@@ -1,0 +1,29 @@
+/* pages/phoneDetail/phoneDetail.wxss */
+
+/*左侧图标*/
+
+.img_left {
+  margin-right: 5px;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+}
+.add_phone_btn{
+  background-color: #0093dc;
+  padding: 10px 10px;
+  width: 140px;
+  height: 40px;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+   line-height: 20px; 
+  font-size: 16px;
+  margin-top: 30px;
+}
+.add_phone_btn_hover{
+  background-color: rgba(0, 147, 200, 0);
+  color: #0093dc;
+}
+.fontSize{
+  font-size: 14px;
+}

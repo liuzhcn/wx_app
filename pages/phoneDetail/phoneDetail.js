@@ -1,33 +1,20 @@
-// pages/apps/apps.js
+// pages/phoneDetail/phoneDetail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    grids: [
-      {
-        "name":"校园卡",
-        "icon":"/images/card.png"
-      },
-      {
-        "name":"通讯录",
-        "icon": "/images/addressbook.png",
-        "url": "/pages/phone/phone"
-      },
-      {
-        "name":"看通知",
-        "icon": "/images/notice.png"
-        
-      },
-      {
-        "name":"查图书",
-        "icon": "/images/book.png"
-      }
-
-    ]
+  
   },
+  add_phone:function() {
+    wx.addPhoneContact({
+      firstName: '学工部',
+      remark:'修缮服务电话',
+      mobilePhoneNumber:'123213213213'
 
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

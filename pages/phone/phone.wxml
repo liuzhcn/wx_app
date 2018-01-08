@@ -1,0 +1,52 @@
+<view class='logo_view'>
+  <view class='logo_view_view'>
+    <image src='/images/phoneList.png' class='img_logo' mode='aspectFit'></image>
+  </view>
+  <view class='logo_text'>校园通讯录</view>
+</view>
+
+<view>
+  <view class="weui-cells fontSize">
+    <navigator url='/pages/phoneList/phoneList' open-type='navigate' >
+      <view class="weui-cell" style='border-bottom:1rpx solid #d9d9d9;'>
+        <view class="weui-cell__hd"></view>
+        <view class="weui-cell__bd">
+          <image src='/images/lock.png' class='img_lock'></image>
+          <p>第16届大学生创新实践中心</p>
+        </view>
+        <view class="weui-cell__ft">
+          <image src='/images/more.png' class='img_more'></image>
+        </view>
+      </view>
+    </navigator>
+
+    <navigator url='/pages/phoneList/phoneList'>
+      <view class="weui-cell" style='border-bottom:1rpx solid #d9d9d9;'>
+        <view class="weui-cell__hd"></view>
+        <view class="weui-cell__bd">
+          <image src='/images/unlock.png' class='img_lock'></image>
+          <p>校园常用电话</p>
+        </view>
+        <view class="weui-cell__ft">
+          <image src='/images/more.png' class='img_more'></image>
+        </view>
+      </view>
+    </navigator>
+
+
+    <block>
+      <navigator url='/pages/phoneList/phoneList'>
+        <view class="weui-cell" style='border-bottom:1rpx solid #d9d9d9;'>
+          <view class="weui-cell__hd"></view>
+          <view class="weui-cell__bd">
+            <image src='/images/lock.png' class='img_lock'></image>
+            <p>自行车协会</p>
+          </view>
+          <view class="weui-cell__ft">
+            <image src='/images/more.png' class='img_more'></image>
+          </view>
+        </view>
+      </navigator>
+    </block>
+  </view>
+</view>
