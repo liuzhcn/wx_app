@@ -2,28 +2,80 @@
 <view class='card_view'>
   <image src='/images/campusCard.png' class='card_img'></image>
   <view class='status_view_left'>
-    <rich-text class="rt_p" type="node" name="p">姓名：张三</rich-text>
-    <rich-text class="rt_p" type="node" name="p">编号：123123123</rich-text>
-    <rich-text class="rt_p" type="node" name="p">部门：123123123</rich-text>
+    <rich-text class="rt_p" type="node" name="p">姓名：{{yikatong.cardInfo.xm}}</rich-text>
+    <rich-text class="rt_p" type="node" name="p">编号：{{yikatong.cardInfo.username}}</rich-text>
+    <rich-text class="rt_p" type="node" name="p">部门：{{yikatong.cardInfo.deptName}}</rich-text>
   </view>
   <view class='status_view_right'>
     <rich-text class="money_title" type="node" name="p">卡内余额</rich-text>
-    <rich-text class="money" type="node" name="p">123.5元</rich-text>
+    <rich-text class="money" type="node" name="p">{{yikatong.cardInfo.balance}}元</rich-text>
   </view>
 </view>
 <!--消费流水查询  -->
 <view class='search'>
-  <view class='search_title'>消费流水查询</view>
+  <view class='search_title'>消费流水查询 </view>
   <view class='search_choose'>
-    <rich-text class='time_btn'>近一周</rich-text> 
-    <rich-text class='time_btn'>近一个月</rich-text>
-    <rich-text class='time_btn'>近三个月</rich-text>
+    <view class="time_btn {{flag1 ? 'time_btn_hover' : ''}}" bindtap='loadWater1'>近一周</view> 
+    <view class="time_btn {{flag2 ? 'time_btn_hover' : ''}}"  bindtap='loadWater2'>近一个月</view>
+    <view class="time_btn {{flag3 ? 'time_btn_hover' : ''}}"  bindtap='loadWater3'>近三个月</view>
   </view>
+  <view style="margin-top:10px;">总共查询到了{{water.result.records}}条数据</view>
 </view>
 
 <!--查询结果  -->
-<view class='search'>
-    <view>
-      
+
+    <view class="page__bd" style='padding:10px 0 10px 0;' wx:for="{{water.result.rows}}" wx:for-item="item">
+        <view class="weui-panel">
+            <view class="weui-panel__hd">消费类型：{{item.dealName}}</view>
+            <view class="weui-panel__bd">
+                <view class="weui-media-box weui-media-box_text">
+                    <view class="weui-media-box__title weui-media-box__title_in-text">
+                      消费金额：{{item.transMoney}}元
+                       <view class="weui-media-box__info__meta" style='float:right;'>剩余金额：{{item.outMoney}}元</view> 
+                    </view>
+                    <view class="weui-media-box__desc">消费地点：{{item.orgName}}</view>
+                    <view class="weui-media-box__info">
+                        <view class="weui-media-box__info__meta">流水号：{{item.transNo}}</view> 
+                        <view class="weui-media-box__info__meta" style='float:right;'>{{item.dealDate}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
     </view>
-</view>
+
+    <!-- <view class="page__bd" style='padding:10px 0 10px 0;'>
+        <view class="weui-panel">
+            <view class="weui-panel__hd">消费类型：消费</view>
+            <view class="weui-panel__bd">
+                <view class="weui-media-box weui-media-box_text">
+                    <view class="weui-media-box__title weui-media-box__title_in-text">消费金额：5.0元</view>
+                    <view class="weui-media-box__desc">消费地点：华中师范大学/后勤集团/饮食中心/桂香园餐厅新/一楼/稀食</view>
+                    <view class="weui-media-box__info">
+                        <view class="weui-media-box__info__meta">流水号：123456789</view> 
+                        <view class="weui-media-box__info__meta" style='float:right;'>2018-01-09 08:08:08</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="page__bd" style='padding:10px 0 10px 0;'>
+        <view class="weui-panel">
+            <view class="weui-panel__hd">消费类型：消费</view>
+            <view class="weui-panel__bd">
+                <view class="weui-media-box weui-media-box_text">
+                    <view class="weui-media-box__title weui-media-box__title_in-text">消费金额：5.0元</view>
+                    <view class="weui-media-box__desc">消费地点：华中师范大学/后勤集团/饮食中心/桂香园餐厅新/一楼/稀食</view>
+                    <view class="weui-media-box__info">
+                        <view class="weui-media-box__info__meta">流水号：123456789</view> 
+                        <view class="weui-media-box__info__meta" style='float:right;'>2018-01-09 08:08:08</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view> -->
+
+
+
+    
+
