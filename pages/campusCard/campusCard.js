@@ -1,34 +1,18 @@
-// pages/phoneDetail/phoneDetail.js
+// pages/campusCard/campusCard.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    info:{
-     groupName: '',
-     name: '',
-     tel: ''
-    }
+  
   },
-  add_phone:function() {
-    var that = this;
-    wx.addPhoneContact({
-      firstName: that.data.info.name,
-      remark: that.data.info.groupName,
-      mobilePhoneNumber:that.data.info.tel
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options);
-   
-    this.setData({
-      info:options
-    })
-    console.log(this.data.info);
+  
   },
 
   /**

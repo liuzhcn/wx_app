@@ -5,21 +5,21 @@
       <image src="/images/department.png" class="img_left"></image>
     </view>
     <view class="weui-cell__bd">部门</view>
-    <view class="weui-cell__ft">修缮服务电话</view>
+    <view class="weui-cell__ft">{{info.groupName}}</view>
   </view>
   <view class="weui-cell">
     <view class="weui-cell__hd">
       <image src="/images/user.png" class="img_left"></image>
     </view>
     <view class="weui-cell__bd">姓名</view>
-    <view class="weui-cell__ft">学工部</view>
+    <view class="weui-cell__ft">{{info.name}}</view>
   </view>
   <view class="weui-cell">
     <view class="weui-cell__hd">
       <image src="/images/phone.png" class="img_left"></image>
     </view>
     <view class="weui-cell__bd">手机号</view>
-    <view class="weui-cell__ft">12893789</view>
+    <view class="weui-cell__ft">{{info.tel}}</view>
   </view>
 </view>
 <view>

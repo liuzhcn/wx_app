@@ -1,0 +1,71 @@
+/* pages/campusCard/campusCard.wxss */
+.card_view{
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 10rpx 10rpx 0 10rpx;
+  position: relative;
+}
+.card_img{
+  width: 730rpx;
+  height: 449rpx;
+}
+.status_view_left{
+  width: 350rpx;
+  height: 200rpx;
+  position: absolute;
+  left: 0rpx;
+  padding-left:20px; 
+  bottom: 70rpx;
+}
+.status_view_right{
+  width: 200rpx;
+  position: absolute;
+  top: 100rpx;
+  right: 0rpx;
+  padding-right: 20px;
+  text-align: left;
+}
+.rt_p{
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-family: "微软雅黑";
+   display:block; 
+}
+.money_title{
+  font-size: 14px;
+  font-family: "微软雅黑";
+  display:block; 
+  font-weight:900;
+}
+.money{
+  font-size: 16px;
+  font-family: "微软雅黑";
+  display:block;
+  color: red; 
+  font-weight:900;
+}
+
+
+/*查询时间  */
+.search{
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.search_title{
+  font-size: 20px;
+  font-family: "微软雅黑";
+  padding-bottom:20px;
+}
+.time_btn{
+  padding: 5px 10px;
+  display: inline-block;
+  border: 1px solid #bfbfbf;
+  border-radius: 5px;
+  margin-right: 10px;
+}

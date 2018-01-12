@@ -8,18 +8,19 @@ Page({
     grids: [
       {
         "name":"校园卡",
-        "icon":"/images/card.png"
+        "icon":"/images/card.png",
+        "url": "/pages/campusCard/campusCard"
       },
       {
         "name":"通讯录",
         "icon": "/images/addressbook.png",
         "url": "/pages/phone/phone"
       },
-      {
+      /*{
         "name":"看通知",
         "icon": "/images/notice.png"
         
-      },
+  },*/
       {
         "name":"查图书",
         "icon": "/images/book.png"

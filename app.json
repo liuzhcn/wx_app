@@ -9,9 +9,12 @@
         "pages/regist/regist",
         "pages/activity/small_target",
         "pages/activity/test",
+
         "pages/phone/phone",
         "pages/phoneList/phoneList",
-        "pages/phoneDetail/phoneDetail"
+        "pages/phoneDetail/phoneDetail",
+
+        "pages/campusCard/campusCard"
     ],
     "window": {
         "backgroundTextStyle": "light",

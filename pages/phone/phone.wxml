@@ -7,7 +7,7 @@
 
 <view>
   <view class="weui-cells fontSize">
-    <navigator url='/pages/phoneList/phoneList' open-type='navigate' >
+    <!-- <navigator url='' open-type='navigate' >
       <view class="weui-cell" style='border-bottom:1rpx solid #d9d9d9;'>
         <view class="weui-cell__hd"></view>
         <view class="weui-cell__bd">
@@ -18,7 +18,7 @@
           <image src='/images/more.png' class='img_more'></image>
         </view>
       </view>
-    </navigator>
+    </navigator> -->
 
     <navigator url='/pages/phoneList/phoneList'>
       <view class="weui-cell" style='border-bottom:1rpx solid #d9d9d9;'>
@@ -34,8 +34,8 @@
     </navigator>
 
 
-    <block>
-      <navigator url='/pages/phoneList/phoneList'>
+   
+      <!-- <navigator url=''>
         <view class="weui-cell" style='border-bottom:1rpx solid #d9d9d9;'>
           <view class="weui-cell__hd"></view>
           <view class="weui-cell__bd">
@@ -46,7 +46,7 @@
             <image src='/images/more.png' class='img_more'></image>
           </view>
         </view>
-      </navigator>
-    </block>
+      </navigator> -->
+    
   </view>
 </view>

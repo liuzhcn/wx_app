@@ -1,0 +1,29 @@
+<!--pages/campusCard/campusCard.wxml-->
+<view class='card_view'>
+  <image src='/images/campusCard.png' class='card_img'></image>
+  <view class='status_view_left'>
+    <rich-text class="rt_p" type="node" name="p">姓名：张三</rich-text>
+    <rich-text class="rt_p" type="node" name="p">编号：123123123</rich-text>
+    <rich-text class="rt_p" type="node" name="p">部门：123123123</rich-text>
+  </view>
+  <view class='status_view_right'>
+    <rich-text class="money_title" type="node" name="p">卡内余额</rich-text>
+    <rich-text class="money" type="node" name="p">123.5元</rich-text>
+  </view>
+</view>
+<!--消费流水查询  -->
+<view class='search'>
+  <view class='search_title'>消费流水查询</view>
+  <view class='search_choose'>
+    <rich-text class='time_btn'>近一周</rich-text> 
+    <rich-text class='time_btn'>近一个月</rich-text>
+    <rich-text class='time_btn'>近三个月</rich-text>
+  </view>
+</view>
+
+<!--查询结果  -->
+<view class='search'>
+    <view>
+      
+    </view>
+</view>

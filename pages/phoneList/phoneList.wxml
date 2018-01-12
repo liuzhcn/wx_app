@@ -1,15 +1,15 @@
 <view class="page__bd page__bd_spacing fontSize">
   <view class="kind-list">
-    <block wx:for="{{list}}" wx:key="id">
+    <block wx:for="{{items}}" wx:for-item="item"  wx:key="groupId">
       <view class="kind-list__item">
-        <view id="{{item.id}}" class="weui-flex kind-list__item-hd {{item.open ? 'kind-list__item-hd_show' : ''}}" bindtap="kindToggle">
-          <view class="weui-flex__item">{{item.name}}</view>
+        <view id="{{item.groupId}}" class="weui-flex kind-list__item-hd {{item.open ? 'kind-list__item-hd_show' : ''}}" bindtap="kindToggle2">
+          <view class="weui-flex__item">{{item.groupName}}</view>
         </view>
         <view class="kind-list__item-bd {{item.open ? 'kind-list__item-bd_show' : ''}}">
           <view class="weui-cells {{item.open ? 'weui-cells_show' : ''}}">
-            <block wx:for="{{item.names}}" wx:for-item="abc" wx:key="*this">
-              <navigator url="/pages/phoneDetail/phoneDetail" class="weui-cell weui-cell_access">
-                <view class="weui-cell__bd fontSize">{{abc}}</view>
+            <block wx:for="{{item.contacts}}" wx:for-item="contacts_son" wx:key="{{contacts_son.id}}">
+              <navigator url="/pages/phoneDetail/phoneDetail?groupName={{item.groupName}}&name={{contacts_son.name}}&tel={{contacts_son.tel}}" class="weui-cell weui-cell_access">
+                <view class="weui-cell__bd fontSize">{{contacts_son.name}}</view>
                 <view class="weui-cell__ft weui-cell__ft_in-access"></view>
               </navigator>
             </block>
