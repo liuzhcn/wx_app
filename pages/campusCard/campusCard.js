@@ -11,11 +11,7 @@ Page({
     water:{
 
     },
-    btnFlag:{
-      flag1:true,
-      flag2:false,
-      flag3:false
-    }
+    btnFlag:1
   },
   //获取一卡通信息
   loadCard:function() {
@@ -55,25 +51,19 @@ Page({
   loadWater1:function(){
     this.loadWater(1);
    this.setData({
-      flag1:true,
-      flag2:false,
-      flag3:false
+     btnFlag:1
    })
   },
   loadWater2: function () {
     this.loadWater(2);
     this.setData({
-      flag1: false,
-      flag2: true,
-      flag3: false
+      btnFlag: 2
     })
   },
   loadWater3: function () {
     this.loadWater(3);
     this.setData({
-      flag1: false,
-      flag2: false,
-      flag3: true
+      btnFlag: 3
     })
   },
   //点击改变颜色

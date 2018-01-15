@@ -25,5 +25,5 @@
   color: #0093dc;
 }
 .fontSize{
-  font-size: 14px;
+  font-size: 16px;
 }
