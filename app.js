@@ -10,6 +10,17 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        wx.request({
+            url: 'https://wxapp.ccnu.edu.cn/wxapp/wxUser/getUserInfo',
+            data:{
+                code:res.code
+            },
+            success:result => {
+                console.log(result.data);
+                this.globalData.appUserInfo = result.data;
+            }
+
+        })
       }
     })
     // 获取用户信息
@@ -34,6 +45,7 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    appUserInfo: null
   }
 })
