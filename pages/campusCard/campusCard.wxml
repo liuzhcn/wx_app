@@ -15,9 +15,9 @@
 <view class='search'>
   <view class='search_title'>消费流水查询 </view>
   <view class='search_choose'>
-    <view class="time_btn {{flag1 ? 'time_btn_hover' : ''}}" bindtap='loadWater1'>近一周</view> 
-    <view class="time_btn {{flag2 ? 'time_btn_hover' : ''}}"  bindtap='loadWater2'>近一个月</view>
-    <view class="time_btn {{flag3 ? 'time_btn_hover' : ''}}"  bindtap='loadWater3'>近三个月</view>
+    <view class="time_btn {{btnFlag==1 ? 'time_btn_hover' : ''}}" bindtap='loadWater1'>近一周</view> 
+    <view class="time_btn {{btnFlag==2 ? 'time_btn_hover' : ''}}"  bindtap='loadWater2'>近一个月</view>
+    <view class="time_btn {{btnFlag==3 ? 'time_btn_hover' : ''}}"  bindtap='loadWater3'>近三个月</view>
   </view>
   <view style="margin-top:10px;">总共查询到了{{water.result.records}}条数据</view>
 </view>
