@@ -23,7 +23,8 @@ Page({
   },*/
       {
         "name":"查图书",
-        "icon": "/images/book.png"
+        "icon": "/images/book.png",
+        "url": "/pages/checkBooks/checkBooks"
       }
 
     ]

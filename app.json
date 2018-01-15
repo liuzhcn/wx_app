@@ -14,7 +14,9 @@
         "pages/phoneList/phoneList",
         "pages/phoneDetail/phoneDetail",
 
-        "pages/campusCard/campusCard"
+        "pages/campusCard/campusCard",
+
+        "pages/checkBooks/checkBooks"
     ],
     "window": {
         "backgroundTextStyle": "light",

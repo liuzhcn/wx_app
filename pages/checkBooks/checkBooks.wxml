@@ -1,0 +1,93 @@
+<!--pages/checkBooks/checkBooks.wxml-->
+<!--我的借阅  -->
+<view class='contain'>
+    <view class='title'>我的借阅</view>
+    <view class='status_contain'>
+        <view class='status_item'>
+            <rich-text type="node" name="span" class='item_title'>欠费</rich-text>
+            <rich-text type="node" name="span">0.00元</rich-text>
+        </view>
+        <view class='status_item'>
+            <rich-text type="node" name="span" class='item_title'>借阅总数</rich-text>
+            <rich-text type="node" name="span">206本</rich-text>
+        </view>
+        <view class='status_item'>
+            <rich-text type="node" name="span" class='item_title'>在借图书</rich-text>
+            <rich-text type="node" name="span">6本</rich-text>
+        </view>
+        <view class='status_item'>
+            <rich-text type="node" name="span" class='item_title'>已超期</rich-text>
+            <rich-text type="node" name="span">2本</rich-text>
+        </view>
+    </view>
+    
+    <!--切换按钮  -->
+    <view class='btn_view'>
+        <view class="btn {{book_flag==1 ? 'btn_hover' : ''}}" bindtap="book_ing" >在借图书</view>
+        <view class="btn {{book_flag==2 ? 'btn_hover' : ''}}" bindtap="book_ed">历史借阅</view>
+    </view>
+    <!--在借图书  -->
+    <view wx:if="{{book_flag==1}}"  style="padding:0 10px 10px 10px">
+        <view class="book_card">
+            <view class="cardl">
+                <view class="booktitle">《一本书读懂大数据》</view>
+                <view class="bookstatus">借书时间：2017年12月8日</view>
+                <view class="bookstatus">应还日期：2018年2月8日</view>
+                <view class="bookstatus">图书索引号：qwer123124142132112321321312</view>
+            </view>
+            <view class="cardr">
+                <view class="circle_view">
+                    <rich-text type="node" name="span" class='circle-span'>正常</rich-text>
+                </view>
+                <view class="bookstatus" style="text-align:center;">续借标志：无续借</view>
+            </view>
+        </view>
+    </view>
+    <!--历史借阅  -->
+    <view  wx:if="{{book_flag==2}}"  style="padding:0 10px 10px 10px">
+        <view class="book_card">
+            <view class="cardl">
+                <view class="booktitle">《毛泽东选集》</view>
+                <view class="bookstatus">借书时间：2018年1月8日</view>
+                <view class="bookstatus">应还日期：2018年3月8日</view>
+                <view class="bookstatus">图书索引号：kdj9284729479037</view>
+            </view>
+            <view class="cardr">
+                <view class="circle_view">
+                    <rich-text type="node" name="span" class='circle-span'>正常</rich-text>
+                </view>
+                <view class="bookstatus" style="text-align:center;">续借标志：无续借</view>
+            </view>
+        </view>
+
+        <view class="book_card">
+            <view class="cardl">
+                <view class="booktitle">《毛泽东选集》</view>
+                <view class="bookstatus">借书时间：2018年1月8日</view>
+                <view class="bookstatus">应还日期：2018年3月8日</view>
+                <view class="bookstatus">图书索引号：kdj9284729479037</view>
+            </view>
+            <view class="cardr">
+                <view class="circle_view">
+                    <rich-text type="node" name="span" class='circle-span'>正常</rich-text>
+                </view>
+                <view class="bookstatus" style="text-align:center;">续借标志：无续借</view>
+            </view>
+        </view>
+
+        <view class="book_card">
+            <view class="cardl">
+                <view class="booktitle">《毛泽东选集》</view>
+                <view class="bookstatus">借书时间：2018年1月8日</view>
+                <view class="bookstatus">应还日期：2018年3月8日</view>
+                <view class="bookstatus">图书索引号：kdj9284729479037</view>
+            </view>
+            <view class="cardr">
+                <view class="circle_view">
+                    <rich-text type="node" name="span" class='circle-span'>正常</rich-text>
+                </view>
+                <view class="bookstatus" style="text-align:center;">续借标志：无续借</view>
+            </view>
+        </view>
+    </view>
+</view>

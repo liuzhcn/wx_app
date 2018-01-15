@@ -21,7 +21,7 @@
     </navigator> -->
 
     <navigator url='/pages/phoneList/phoneList'>
-      <view class="weui-cell" style='border-bottom:1rpx solid #d9d9d9;'>
+      <view class="weui-cell" style="border-bottom:1rpx solid #d9d9d9;padding:20px 15px;font-size=16px">
         <view class="weui-cell__hd"></view>
         <view class="weui-cell__bd">
           <image src='/images/unlock.png' class='img_lock'></image>
