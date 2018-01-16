@@ -118,7 +118,7 @@ Page({
    */
   onLoad: function (options) {
     this.commonList();
-
+    //TODO 整个代码需要重构
     //1.判断是否有缓存，有缓存则直接作为出事数据
 
     //2.如果没有缓存，则请求网络，获取通讯录数据    
