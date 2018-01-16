@@ -2,13 +2,13 @@
 <view class='card_view'>
   <image src='/images/campusCard.png' class='card_img'></image>
   <view class='status_view_left'>
-    <rich-text class="rt_p" type="node" name="p">姓名：{{yikatong.cardInfo.xm}}</rich-text>
-    <rich-text class="rt_p" type="node" name="p">编号：{{yikatong.cardInfo.username}}</rich-text>
-    <rich-text class="rt_p" type="node" name="p">部门：{{yikatong.cardInfo.deptName}}</rich-text>
+    <rich-text class="rt_p" type="node" name="p">姓名：{{appUserInfo.name}}</rich-text>
+    <rich-text class="rt_p" type="node" name="p">编号：{{appUserInfo.username}}</rich-text>
+    <rich-text class="rt_p" type="node" name="p">部门：{{appUserInfo.deptname}}</rich-text>
   </view>
   <view class='status_view_right'>
     <rich-text class="money_title" type="node" name="p">卡内余额</rich-text>
-    <rich-text class="money" type="node" name="p">{{yikatong.cardInfo.balance}}元</rich-text>
+    <rich-text class="money" type="node" name="p">{{yikatong.result.balance}}元</rich-text>
   </view>
 </view>
 <!--消费流水查询  -->
@@ -19,7 +19,8 @@
     <view class="time_btn {{btnFlag==2 ? 'time_btn_hover' : ''}}"  bindtap='loadWater2'>近一个月</view>
     <view class="time_btn {{btnFlag==3 ? 'time_btn_hover' : ''}}"  bindtap='loadWater3'>近三个月</view>
   </view>
-  <view style="margin-top:10px;">总共查询到了{{water.result.records}}条数据</view>
+  <!-- <view style="margin-top:10px;">总共查询到了{{water.result.records}}条数据</view> -->
+  <view wx:if="{{(!water.result.rows) || (water.result.rows.length==0)}}" class="nowater">暂无数据</view>
 </view>
 
 <!--查询结果  -->
@@ -30,7 +31,7 @@
             <view class="weui-panel__bd">
                 <view class="weui-media-box weui-media-box_text">
                     <view class="weui-media-box__title weui-media-box__title_in-text">
-                      消费金额：{{item.transMoney}}元
+                      {{item.dealName}}：{{item.transMoney}}元
                        <view class="weui-media-box__info__meta" style='float:right;'>剩余金额：{{item.outMoney}}元</view> 
                     </view>
                     <view class="weui-media-box__desc">消费地点：{{item.orgName}}</view>

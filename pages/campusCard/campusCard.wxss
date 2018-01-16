@@ -77,3 +77,8 @@
 .result{
   font-size: 14px;
 }
+.nowater{
+   padding: 30px;
+  margin: 0 auto;
+  text-align: center;
+}

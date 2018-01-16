@@ -5,19 +5,19 @@
     <view class='status_contain'>
         <view class='status_item'>
             <rich-text type="node" name="span" class='item_title'>欠费</rich-text>
-            <rich-text type="node" name="span"><text style="color:#ff9800;">0.00</text>  元</rich-text>
+            <rich-text type="node" name="span"><text style="color:#ff9800;">{{reader.dz.QKJE}}</text>  元</rich-text>
         </view>
         <view class='status_item'>
-            <rich-text type="node" name="span" class='item_title'>借阅总数</rich-text>
-            <rich-text type="node" name="span"><text style="color:#2b7bf2;">206</text> 本</rich-text>
+            <rich-text type="node" name="span" class='item_title'>违章状态</rich-text>
+            <rich-text type="node" name="span"><text style="color:#2b7bf2;">{{reader.dz.WZZT==0?"未违章":"违章"}}</text></rich-text>
         </view>
         <view class='status_item'>
-            <rich-text type="node" name="span" class='item_title'>在借图书</rich-text>
-            <rich-text type="node" name="span"><text style="color:#2b7bf2;">6</text> 本</rich-text>
+            <rich-text type="node" name="span" class='item_title'>已借册数</rich-text>
+            <rich-text type="node" name="span"><text style="color:#2b7bf2;">{{reader.dz.YJCS}}</text> 本</rich-text>
         </view>
         <view class='status_item'>
-            <rich-text type="node" name="span" class='item_title'>已超期</rich-text>
-            <rich-text type="node" name="span"><text style="color:#2b7bf2;">2</text> 本</rich-text>
+            <rich-text type="node" name="span" class='item_title'>证件状态</rich-text>
+            <rich-text type="node" name="span"><text style="color:#2b7bf2;">{{reader.dz.ZJZT=="1"?"正常":"异常"}}</text></rich-text>
         </view>
     </view>
     
@@ -28,38 +28,40 @@
     </view>
     <!--在借图书  -->
     <view wx:if="{{book_flag==1}}"  style="padding:0 10px 10px 10px">
-        <view class="book_card">
+        <view class="book_card" wx:for="{{booking.jy}}"  wx:for-item="item" wx:key="*this">
             <view class="cardl">
-                <view class="booktitle">《一本书读懂大数据》</view>
-                <view class="bookstatus">借书时间：2017年12月8日</view>
-                <view class="bookstatus">应还日期：2018年2月8日</view>
-                <view class="bookstatus">图书索引号：qwer123124142132112321321312</view>
+                <view class="booktitle">《{{item.TSMC}}》</view>
+                <view class="bookstatus">借书时间：{{item.JSRQ}}</view>
+                <view class="bookstatus">应还日期：{{item.HSRQ}}</view>
+                <view class="bookstatus">图书索引号：{{item.SSH}}</view>
             </view>
             <view class="cardr">
                 <view class="circle_view bc1">
                     <rich-text type="node" name="span" class='circle-span'>正常</rich-text>
                 </view>
-                <view class="bookstatus green" style="text-align:center;">续借标志：无续借</view>
+                <view class="bookstatus green" style="text-align:center;">续借标志：{{item.XJBS==1 ? "续借" : "无续借" }}</view>
             </view>
         </view>
+        <!--如果无在借图书  -->
+        <view wx:if="{{booking.jy.length==0}}" class="nobook">无在借图书</view>
     </view>
     <!--历史借阅  -->
-    <view  wx:if="{{book_flag==2}}"  style="padding:0 10px 10px 10px">
-        <view class="book_card">
+    <view  wx:if="{{book_flag==2}}"     style="padding:0 10px 10px 10px">
+        <view class="book_card" wx:for="{{booked.jyls}}"  wx:for-item="item"  wx:key="*this">
             <view class="cardl">
-                <view class="booktitle">《毛泽东选集》</view>
-                <view class="bookstatus">借书时间：2018年1月8日</view>
-                <view class="bookstatus">应还日期：2018年3月8日</view>
-                <view class="bookstatus">图书索引号：kdj9284729479037</view>
+                <view class="booktitle">《{{item.TSMC}}》</view>
+                <view class="bookstatus">借书时间：{{item.JSRQ}}</view>
+                <view class="bookstatus">应还日期：{{item.HSRQ}}</view>
+                <view class="bookstatus">图书索引号：{{item.SSH}}</view>
             </view>
             <view class="cardr">
                 <view class="circle_view bc1">
                     <rich-text type="node" name="span" class='circle-span'>正常</rich-text>
                 </view>
-                <view class="bookstatus green" style="text-align:center;">续借标志：无续借</view>
+                <view class="bookstatus green" style="text-align:center;">续借标志：{{item.XJBS==1 ? "续借" : "无续借" }}</view>
             </view>
         </view>
-
+<!--  
         <view class="book_card">
             <view class="cardl">
                 <view class="booktitle">《毛泽东选集》</view>
@@ -89,5 +91,8 @@
                 <view class="bookstatus orange" style="text-align:center;">续借标志：无续借</view>
             </view>
         </view>
+        -->
     </view>
+
+    
 </view>

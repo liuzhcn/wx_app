@@ -69,12 +69,12 @@
     margin-top: 10px;
 }
 .cardl{
-  width:60%;
+  width:61%;
   display: inline-block;
   height: 100%;
 }
 .cardr{
-  width: 35%;
+  width: 34%;
   display: block;
   float: right;
   height: 100%;
@@ -132,4 +132,10 @@
     vertical-align: middle;
     box-sizing: border-box;
     font-size: 14px;
+}
+
+.nobook{
+  padding: 30px;
+  margin: 0 auto;
+  text-align: center;
 }

@@ -1,10 +1,14 @@
 // pages/campusCard/campusCard.js
+const app = getApp();
 Page({
-
+  
   /**
    * 页面的初始数据
    */
   data: {
+    appUserInfo:{
+
+    },
     yikatong:{
      
     },
@@ -37,9 +41,16 @@ Page({
   loadWater:function(type){
     //type 1=一周，2=一个月，3=三个月
     var that = this;
+    if(!type){
+      type = 1;
+    }
     wx.request({
-      url: 'https://wxapp.ccnu.edu.cn/wxapp/ecard_portal/query_trans?type=' + type,
+      url: 'https://wxapp.ccnu.edu.cn/wxapp/ecard_portal/query_trans',
       dataType:'json',
+      data: {
+        token: getApp().globalData.token,
+        type: type
+      },
       success:function(res){
         console.log(res.data);
         that.setData({
@@ -78,6 +89,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //获取appUserInfo的信息
+    this.setData({
+      appUserInfo: app.globalData.appUserInfo
+    })
+    console.log(app.globalData.appUserInfo);
     this.loadCard();
     this.loadWater(1);//默认一周
   },
