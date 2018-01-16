@@ -1,3 +1,4 @@
+
 //index.js
 //获取应用实例
 const app = getApp()
@@ -22,8 +23,10 @@ Page({
 
                       if (result.data.errcode == '0') {
                           getApp().globalData.token = result.data.token;
+                          getApp().globalData.appUserInfo = result.data.userInfo;
                       } else {
                           getApp().globalData.token = null;
+                          getApp().globalData.appUserInfo = null;
                       }
 
                   }
