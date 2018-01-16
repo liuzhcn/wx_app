@@ -3,6 +3,7 @@
 .contain {
   width: 100%;
   background-color: white;
+  box-sizing: border-box;
 }
 
 .title {
@@ -37,9 +38,10 @@
 
 .btn_view {
   width: 100%;
-  padding: 10px 20px;
+  padding: 10px 0px 10px 10px;
   display: block;
   clear: both;
+  box-sizing: border-box;
 }
 
 .btn{
