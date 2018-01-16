@@ -1,20 +1,26 @@
 <!--pages/phoneDetail/phoneDetail.wxml-->
 <view class="weui-cells weui-cells_after-title fontSize">
-  <view class="weui-cell">
+  <view class="weui-cell padding">
     <view class="weui-cell__hd">
       <image src="/images/department.png" class="img_left"></image>
     </view>
     <view class="weui-cell__bd">部门</view>
     <view class="weui-cell__ft">{{info.groupName}}</view>
   </view>
-  <view class="weui-cell">
+</view>
+
+<view class="weui-cells weui-cells_after-title fontSize">
+  <view class="weui-cell padding">
     <view class="weui-cell__hd">
       <image src="/images/user.png" class="img_left"></image>
     </view>
     <view class="weui-cell__bd">姓名</view>
     <view class="weui-cell__ft">{{info.name}}</view>
   </view>
-  <view class="weui-cell" data-tel="{{info.tel}}" bindtap="call">
+</view>
+
+<view class="weui-cells weui-cells_after-title fontSize">
+  <view class="weui-cell padding" data-tel="{{info.tel}}" bindtap="call">
     <view class="weui-cell__hd">
       <image src="/images/phone.png" class="img_left"></image>
     </view>
@@ -22,6 +28,7 @@
     <view class="weui-cell__ft">{{info.tel}}</view>
   </view>
 </view>
+
 <view>
   <button class="add_phone_btn" hover-class='add_phone_btn_hover' bindtap='add_phone'> 添加到联系人 </button>
 </view>

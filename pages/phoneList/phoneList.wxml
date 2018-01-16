@@ -3,7 +3,7 @@
     <block wx:for="{{items}}" wx:for-item="item"  wx:key="groupId">
       <view class="kind-list__item">
         <view id="{{item.groupId}}" class="weui-flex kind-list__item-hd {{item.open ? 'kind-list__item-hd_show' : ''}}" bindtap="kindToggle2">
-          <view class="weui-flex__item">{{item.groupName}}</view>
+          <view class="weui-flex__item" style="font-size:18px;">{{item.groupName}}</view>
         </view>
         <view class="kind-list__item-bd {{item.open ? 'kind-list__item-bd_show' : ''}}">
           <view class="weui-cells {{item.open ? 'weui-cells_show' : ''}}">

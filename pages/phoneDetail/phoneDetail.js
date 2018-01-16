@@ -20,11 +20,24 @@ Page({
     })
   },
   call:function(event) {
-    
-    console.log(this.data.info.tel);
-    wx.makePhoneCall({
-      phoneNumber: this.data.info.tel
+    var that = this;
+    console.log(that.data.info.tel);
+    wx.showModal({
+      title: '提示',
+      content: "确认拨打 " + that.data.info.tel + " 吗？",
+      success: function (res) {
+        if (res.confirm) {
+          console.log('用户点击确定');
+          wx.makePhoneCall({
+            phoneNumber: that.data.info.tel
+          })
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
     })
+
+    
   },
   /**
    * 生命周期函数--监听页面加载

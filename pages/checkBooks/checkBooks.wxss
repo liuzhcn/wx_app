@@ -91,6 +91,7 @@
     color: #999;
     word-break: break-all;
 }
+
 .circle_view{
     width: 50px;
     height: 50px;
@@ -99,9 +100,32 @@
     margin: 10px auto;
     display: table;
     padding: 0 5px;
-    border: 2px solid #34bf59;
     box-sizing: border-box;
     
+}
+/*正常-绿色*/
+.bc1{
+  border: 2px solid #34bf59;
+  color: #34bf59;
+}
+/*超期-红色*/
+.bc2{
+  border: 2px solid #de494e;
+  color: #de494e;
+}
+/*即将到期-橙色*/
+.bc3{
+  border: 2px solid #ff9800;
+  color: #ff9800;
+}
+.green{
+   color: #34bf59;
+}
+.red{
+   color: #de494e;
+}
+.orange{
+  color: #ff9800;
 }
 .circle-span{
     display: table-cell;
