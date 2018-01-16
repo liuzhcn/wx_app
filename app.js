@@ -1,28 +1,8 @@
 //app.js
 App({
   onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        wx.request({
-            url: 'https://wxapp.ccnu.edu.cn/wxapp/wxUser/getUserInfo',
-            data:{
-                code:res.code
-            },
-            success:result => {
-                console.log(result.data);
-                this.globalData.appUserInfo = result.data;
-            }
-
-        })
-      }
-    })
+ 
+   
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -46,6 +26,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    appUserInfo: null
+    appUserInfo: null,
+    token: null
   }
 })
