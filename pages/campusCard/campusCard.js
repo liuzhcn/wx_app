@@ -19,9 +19,6 @@ Page({
     wx.request({
       url: 'https://wxapp.ccnu.edu.cn/wxapp/ecard_portal/get_info',
       dataType:'json',
-      data:{
-          token:getApp().globalData.token
-      },
       success:function(res){
         console.log(res.data);
         that.setData({

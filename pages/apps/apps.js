@@ -89,7 +89,7 @@ Page({
 
     openApp:function(event) {
         //如果没有身份绑定，则提示并退出
-        if(getApp().globalData.token == null){
+        if(getApp().globalData.appUserInfo == null){
             wx.showModal({
                 title: '',
                 content: '您没有绑定身份，无法访问该服务',
