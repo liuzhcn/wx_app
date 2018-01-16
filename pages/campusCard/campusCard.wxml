@@ -24,7 +24,7 @@
 
 <!--查询结果  -->
 
-    <view class="page__bd" style='padding:10px 0 10px 0;' wx:for="{{water.result.rows}}" wx:for-item="item">
+    <view class="page__bd" style='padding:10px 0 10px 0;' wx:for="{{water.result.rows}}" wx:for-item="item" wx:key="item.transNo">
         <view class="weui-panel">
             <view class="weui-panel__hd">消费类型：{{item.dealName}}</view>
             <view class="weui-panel__bd">

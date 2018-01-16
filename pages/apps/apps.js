@@ -1,4 +1,5 @@
-// pages/apps/apps.js
+// pages/apps/apps.js 2006983633
+
 Page({
 
     /**
@@ -23,7 +24,8 @@ Page({
         },*/
             {
                 "name": "查图书",
-                "icon": "/images/book.png"
+                "icon": "/images/book.png",
+                "url":"/pages/checkBooks/checkBooks"
             }
 
         ]
