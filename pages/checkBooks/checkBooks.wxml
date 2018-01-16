@@ -5,19 +5,19 @@
     <view class='status_contain'>
         <view class='status_item'>
             <rich-text type="node" name="span" class='item_title'>欠费</rich-text>
-            <rich-text type="node" name="span">0.00元</rich-text>
+            <rich-text type="node" name="span"><text style="color:#ff9800;">0.00</text>  元</rich-text>
         </view>
         <view class='status_item'>
             <rich-text type="node" name="span" class='item_title'>借阅总数</rich-text>
-            <rich-text type="node" name="span">206本</rich-text>
+            <rich-text type="node" name="span"><text style="color:#2b7bf2;">206</text> 本</rich-text>
         </view>
         <view class='status_item'>
             <rich-text type="node" name="span" class='item_title'>在借图书</rich-text>
-            <rich-text type="node" name="span">6本</rich-text>
+            <rich-text type="node" name="span"><text style="color:#2b7bf2;">6</text> 本</rich-text>
         </view>
         <view class='status_item'>
             <rich-text type="node" name="span" class='item_title'>已超期</rich-text>
-            <rich-text type="node" name="span">2本</rich-text>
+            <rich-text type="node" name="span"><text style="color:#2b7bf2;">2</text> 本</rich-text>
         </view>
     </view>
     
@@ -36,10 +36,10 @@
                 <view class="bookstatus">图书索引号：qwer123124142132112321321312</view>
             </view>
             <view class="cardr">
-                <view class="circle_view">
+                <view class="circle_view bc1">
                     <rich-text type="node" name="span" class='circle-span'>正常</rich-text>
                 </view>
-                <view class="bookstatus" style="text-align:center;">续借标志：无续借</view>
+                <view class="bookstatus green" style="text-align:center;">续借标志：无续借</view>
             </view>
         </view>
     </view>
@@ -53,10 +53,10 @@
                 <view class="bookstatus">图书索引号：kdj9284729479037</view>
             </view>
             <view class="cardr">
-                <view class="circle_view">
+                <view class="circle_view bc1">
                     <rich-text type="node" name="span" class='circle-span'>正常</rich-text>
                 </view>
-                <view class="bookstatus" style="text-align:center;">续借标志：无续借</view>
+                <view class="bookstatus green" style="text-align:center;">续借标志：无续借</view>
             </view>
         </view>
 
@@ -68,10 +68,10 @@
                 <view class="bookstatus">图书索引号：kdj9284729479037</view>
             </view>
             <view class="cardr">
-                <view class="circle_view">
-                    <rich-text type="node" name="span" class='circle-span'>正常</rich-text>
+                <view class="circle_view bc2">
+                    <rich-text type="node" name="span" class='circle-span'>超期</rich-text>
                 </view>
-                <view class="bookstatus" style="text-align:center;">续借标志：无续借</view>
+                <view class="bookstatus red" style="text-align:center;">续借标志：无续借</view>
             </view>
         </view>
 
@@ -83,10 +83,10 @@
                 <view class="bookstatus">图书索引号：kdj9284729479037</view>
             </view>
             <view class="cardr">
-                <view class="circle_view">
-                    <rich-text type="node" name="span" class='circle-span'>正常</rich-text>
+                <view class="circle_view bc3">
+                    <rich-text type="node" name="span" class='circle-span'>即将到期</rich-text>
                 </view>
-                <view class="bookstatus" style="text-align:center;">续借标志：无续借</view>
+                <view class="bookstatus orange" style="text-align:center;">续借标志：无续借</view>
             </view>
         </view>
     </view>
