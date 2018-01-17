@@ -37,9 +37,9 @@
             </view>
             <view class="cardr">
                 <view class="circle_view bc1">
-                    <rich-text type="node" name="span" class='circle-span'>正常</rich-text>
+                    <rich-text type="node" name="span" class='circle-span'>{{item.XJBS==1 ? "续借" : "无续借" }}</rich-text>
                 </view>
-                <view class="bookstatus green" style="text-align:center;">续借标志：{{item.XJBS==1 ? "续借" : "无续借" }}</view>
+                <!-- <view class="bookstatus green" style="text-align:center;">续借标志：{{item.XJBS==1 ? "续借" : "无续借" }}</view> -->
             </view>
         </view>
         <!--如果无在借图书  -->
@@ -56,9 +56,9 @@
             </view>
             <view class="cardr">
                 <view class="circle_view bc1">
-                    <rich-text type="node" name="span" class='circle-span'>正常</rich-text>
+                    <rich-text type="node" name="span" class='circle-span'>{{item.XJBS==1 ? "续借" : "无续借" }}</rich-text>
                 </view>
-                <view class="bookstatus green" style="text-align:center;">续借标志：{{item.XJBS==1 ? "续借" : "无续借" }}</view>
+                <!-- <view class="bookstatus green" style="text-align:center;">续借标志：{{item.XJBS==1 ? "续借" : "无续借" }}</view> -->
             </view>
         </view>
 <!--  
