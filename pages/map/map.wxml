@@ -1,4 +1,8 @@
 <!--pages/map/map.wxml-->
-<view class='page'>
-<map id="map" latitude="30.517330" longitude="114.360600" scale="16" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 600px;"></map>
+ <view class='page'>
+  <map id="map" latitude="30.517330" longitude="114.360600" scale="16" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 600px;"></map>
+</view> 
+<!--顶部菜单  -->
+<view class="scrollView">
+    <view wx:for="{{tabs}}" class="view_item "  wx:for-item="item"  wx:key="{{tab.index}}" bindtap="chooseItem">{{item}}</view>
 </view>
