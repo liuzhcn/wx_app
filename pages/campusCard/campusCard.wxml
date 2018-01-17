@@ -25,7 +25,7 @@
 
 <!--查询结果  -->
 
-    <view class="page__bd" style='padding:10px 0 10px 0;' wx:for="{{water.result.rows}}" wx:for-item="item" wx:key="item.transNo">
+    <view class="page__bd" style='padding:10px 0 10px 0;' wx:for="{{rows}}" wx:for-item="item" wx:key="item.transNo">
         <view class="weui-panel">
             <view class="weui-panel__hd">消费类型：{{item.dealName}}</view>
             <view class="weui-panel__bd">
@@ -43,8 +43,13 @@
             </view>
         </view>
     </view>
-
-    <!-- <view class="page__bd" style='padding:10px 0 10px 0;'>
+    
+      <!--   <view class="weui-loadmore" wx:if="{{showPic}}">
+          <view class="weui-loading"></view>
+          <view class="weui-loadmore__tips">正在加载</view>
+        </view>
+    
+    <view class="page__bd" style='padding:10px 0 10px 0;'>
         <view class="weui-panel">
             <view class="weui-panel__hd">消费类型：消费</view>
             <view class="weui-panel__bd">

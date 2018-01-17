@@ -18,7 +18,7 @@ Page({
             success: function (res) {
                 if (res.code) {
                     //发起网络请求
-                    path = 'https://wxapp.ccnu.edu.cn/wxapp/cas/login?code='+res.code
+                    path = 'https://wxapp.ccnu.edu.cn/wxapp/cas/wxLogin?code='+res.code
                     console.log(path);
                     that.setData({ url: path });
 
