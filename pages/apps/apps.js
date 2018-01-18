@@ -8,24 +8,37 @@ Page({
     data: {
         grids: [
             {
-                "name": "校园卡",
-                "icon": "/images/card.png",
-                "url": "/pages/campusCard/campusCard"
+                name: "校园卡",
+                icon: "/images/card.png",
+                type: "inner",
+                url: "/pages/campusCard/campusCard",
+                auth:true
             },
             {
-                "name": "通讯录",
-                "icon": "/images/addressbook.png",
-                "url": "/pages/phone/phone"
+                name: "通讯录",
+                icon: "/images/addressbook.png",
+                type: "inner",
+                url: "/pages/phone/phone",
+                auth:true
             },
             /*{
               "name":"看通知",
               "icon": "/images/notice.png"
               
         },*/
+            // {
+            //     name: "查图书",
+            //     icon: "/images/book.png",
+            //     type: "web",
+            //     url: "http://mlib.ccnu.edu.cn/sms/opac/search/showiphoneSearch.action",
+            //     auth: false
+            // },
             {
-                "name": "查图书",
-                "icon": "/images/book.png",
-                "url":"/pages/checkBooks/checkBooks"
+                name: "查借阅",
+                icon: "/images/book.png",
+                type: "inner",
+                url: "/pages/checkBooks/checkBooks",
+                auth:true
             }
 
         ]
@@ -88,8 +101,10 @@ Page({
     },
 
     openApp:function(event) {
-        //如果没有身份绑定，则提示并退出
-        if(getApp().globalData.token == null){
+        //如果需要验证的应用没有身份绑定，则提示并退出
+        var auth = event.currentTarget.dataset.auth;
+
+        if(auth && getApp().globalData.token == null){
             wx.showModal({
                 title: '',
                 content: '您没有绑定身份，无法访问该服务',
@@ -98,9 +113,16 @@ Page({
             return;
         }    
 
-        //有身份绑定则进行跳转
-        wx.navigateTo({
-            url: event.currentTarget.dataset.url
-        })
+        //根据type用不同的方式打开应用
+        var type = event.currentTarget.dataset.type;
+        var appurl = event.currentTarget.dataset.url;
+        if(type == 'inner'){
+            wx.navigateTo({url: appurl});
+        }
+
+        if(type == 'web'){
+            wx.navigateTo({url:'webapp?url='+appurl})
+        }
+        
     }
 })
