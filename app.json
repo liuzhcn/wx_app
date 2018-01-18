@@ -4,7 +4,10 @@
         "pages/logs/logs",
         "pages/me/me",
         "pages/apps/apps",
+
         "pages/map/map",
+        "pages/mapDetail/mapDetail",
+
         "pages/introduce/introduce",
         "pages/regist/regist",
         "pages/activity/small_target",

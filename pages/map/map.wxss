@@ -1,35 +1,23 @@
 /* pages/map/map.wxss */
-.top_navi{
-  width: 100%;
-  /* height: 40px; */
-  /* background-color: #0093dc; */
-  color: rgb(238, 238, 238);
-  font-size: 14px;
-}
 /*导航的每个小块*/
 .top_navi_son{
   padding: 5px 20px;
-  float: left;
+  /* width: 100px; */
+  display: inline-block;
+  color: #ffffff;
 }
-.scrollView{
-  white-space: nowrap;
+
+.contain_view{
   width: 100%;
   height: 40px;
-  overflow-x: scroll;
-  background-color: #0093dc;
-  color: white;
   position: fixed;
   top: 0;
-  left: 0;
-}
-::-webkit-scrollbar{
-  width: 0;
-  height: 0;
-  color: transparent;
+  left: 0; 
+  z-index: 999;
 }
 .view_item{
-  height: 37px;
-  /* width: 40px; */
+  height: 37px; 
+   width: 40px; 
   display: inline-block;
   padding: 5px 10px;
   box-sizing: border-box;
@@ -40,5 +28,4 @@
   font-size: 16px;
   font-weight: bold;
   border-bottom: 2px solid white;
-  
 }

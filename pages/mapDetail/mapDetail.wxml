@@ -1,0 +1,11 @@
+<!--pages/mapDetail/mapDetail.wxml-->
+<view class="contain">
+    <image src="/images/start.jpg" mode='aspectFill' class="bg-img"></image>
+    <view class='cover_view'>
+        <view class="text">华师东大门，紧邻888公交站</view>
+        <view style='text-align:center'>
+          <button class="mini-btn button" type="default" size="mini">查看路线</button>
+        </view>
+        
+    </view>
+</view>

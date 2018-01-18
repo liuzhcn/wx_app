@@ -1,8 +1,28 @@
 <!--pages/map/map.wxml-->
- <view class='page'>
-  <map id="map" latitude="30.517330" longitude="114.360600" scale="16" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 600px;"></map>
-</view> 
-<!--顶部菜单  -->
-<view class="scrollView">
-    <view wx:for="{{tabs}}" class="view_item "  wx:for-item="item"  wx:key="{{tab.index}}" bindtap="chooseItem">{{item}}</view>
+<!-- <view class='page'>
+
+  <map id="map" latitude="30.517330" longitude="114.360600" scale="16" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 600px;">
+    <cover-view class="contain_view">
+      <scroll-view class="scrollView" scroll-x="true" style="width: 100%">
+        <view id="demo1" class="top_navi_son" bindtap="ToMapDetail">1阿萨德爱上</view>
+        <view id="demo1" class="top_navi_son">121321</view>
+        <view id="demo1" class="top_navi_son">1发郭德纲</view>
+        <view id="demo1" class="top_navi_son">1许许</view>
+        <view id="demo1" class="top_navi_son">1麦科勒姆</view>
+      </scroll-view>
+    </cover-view>
+
+  </map>
+</view> -->
+<!--pages/map/map.wxml-->
+<view class='page' style='width:100%;background-color:#0093dc;'>
+  <view style='width:100%;'>
+    <scroll-view scroll-x='true' style="white-space: nowrap;width:100%;">
+      <view wx:for="{{mapData}}" wx:for-item="item" wx:key="{{index}}" data-index="{{index}}" class='top_navi_son'>{{index}}{{item.MapKindName}}</view>
+    </scroll-view>
+  </view>
+  <view>
+    <map id="map" latitude="30.517330" longitude="114.360600" scale="16" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 600px;"></map>
+
+  </view>
 </view>
