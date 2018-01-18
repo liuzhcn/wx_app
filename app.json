@@ -12,14 +12,12 @@
         "pages/regist/regist",
         "pages/activity/small_target",
         "pages/activity/test",
-
         "pages/phone/phone",
         "pages/phoneList/phoneList",
         "pages/phoneDetail/phoneDetail",
-
         "pages/campusCard/campusCard",
-
-        "pages/checkBooks/checkBooks"
+        "pages/checkBooks/checkBooks",
+        "pages/apps/webapp"
     ],
     "window": {
         "backgroundTextStyle": "light",
