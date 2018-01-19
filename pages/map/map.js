@@ -1,138 +1,10 @@
 // pages/map/map.js
 Page({
   data: {
-    mapData:[
-      {
-        MapKindName: "教学楼",
-        MapItem: [
-          {
-            name: "8教学楼",
-            jd: "114.3591900000",
-            wd: "114.3591900000"
-          },
-          {
-            name: "9教学楼",
-            jd: "114.3632400000",
-            wd: "30.5185600000"
-          },
-          {
-            name: "7号教学大楼",
-            jd: "114.3622900000",
-            wd: "30.5166300000"
-          }
-        ]
-      },
-      {
-        MapKindName: "部门",
-        MapItem: [
-          {
-            name: "校团委",
-            jd: "114.3618900000",
-            wd: "30.5173200000"
-          },
-          {
-            name: "人武部",
-            jd: "114.3568300000",
-            wd: "30.5232900000"
-          },
-          {
-            name: "学工部",
-            jd: "114.3582900000",
-            wd: "30.5201800000"
-          }
-        ]
-      },
-      {
-        MapKindName: "学院",
-        MapItem: [
-          {
-            name: "美术学院",
-            jd: "114.3643900000",
-            wd: "30.5171300000"
-          },
-          {
-            name: "研究生院",
-            jd: "114.3641300000",
-            wd: "30.5130200000"
-          },
-          {
-            name: "音乐学院",
-            jd: "114.3614300000",
-            wd: "30.5156700000"
-          },
-          {
-            name: "文学院",
-            jd: "114.3599500000",
-            wd: "30.5186300000"
-          }
-        ]
-      }
-    ],
-    markers: [{
-      iconPath: "/images/location-640.png",
-      id: 0,
-      latitude: 30.5183503570,
-      longitude: 114.3591900000,
-      width: 20,
-      height: 20,
-      callout: {
-        content: "8教学楼",
-        color: "#FFFFFF",
-        fontSize: 12,
-        borderRadius: 10,
-        bgColor: "#0093dc",
-        padding: 5,
-        display: "ALWAYS",
-        textAlign: "center"
-      },
-      }, {
-        iconPath: "/images/location-640.png",
-        id: 0,
-        latitude: 30.5185600000,
-        longitude: 114.3632400000,
-        width: 20,
-        height: 20,
-        callout: {
-          content: "9教学楼",
-          color: "#FFFFFF",
-          fontSize: 12,
-          borderRadius: 10,
-          bgColor: "#0093dc",
-          padding: 5,
-          display: "ALWAYS",
-          textAlign: "center"
-        },
-    }, {
-      iconPath: "/images/location-640.png",
-      id: 0,
-      latitude: 30.5166300000,
-      longitude: 114.3622900000,
-      width: 20,
-      height: 20,
-      callout: {
-        content: "7教学楼",
-        color: "#FFFFFF",
-        fontSize: 12,
-        borderRadius: 10,
-        bgColor: "#0093dc",
-        padding: 5,
-        display: "ALWAYS",
-        textAlign: "center"
-      },
-    }],
-   /* controls: [{
-      id: 1,
-      position: {
-        left: 0,
-        top: 300,
-        width: 100,
-        height: 100
-      },
-      iconPath: "/images/location-640.png",
-      clickable: true
-    }
-    ]*/
-
+    mapData:[],
+    markers: [],
+    mapKindFlag:0,
+    includes:[]
   },
   regionchange(e) {
     console.log(e.type)
@@ -148,7 +20,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.loadMap();
   },
 
   /**
@@ -202,32 +74,83 @@ Page({
 
   /*请求地图数据 */
   loadMap: function () {
-    /* wx.request({
-       url: "http://wxapp.ccnu.edu.cn:8080/wxapp2/map/api",
+    var that = this;
+     wx.request({
+       url: "https://wxapp.ccnu.edu.cn/wxapp/map/api",
        success: function (res) {
          console.log(res.data);
+         var markeritems = that.builderMarkers(res.data[0].MapItem);
+         that.setData({
+            mapData : res.data,
+            markers : markeritems
+         })
        },
        fail: function () {
- 
+        console.log("failed to load mapData");
        }
-     })*/
-    
-    // this.setData({
-    //   markers.latitude:
-    // })
+     })
   },
-  /*显示地图 */
-  showMap: function () {
+
+  builderMarkers:function(mapitems){
+      var items = [];//地图上的每个小点
+      var includes = [] ;//地图上点的经纬度
+      for(var i=0;i<mapitems.length;i++){
+        console.log(mapitems[i]);
+        var marker_item = {
+          iconPath: "/images/location-640.png",
+          id: i,
+          latitude: mapitems[i].wd,
+          longitude: mapitems[i].jd,
+          width: 20,
+          height: 20,
+          callout: {
+            content: mapitems[i].name,
+            color: "#FFFFFF",
+            fontSize: 12,
+            borderRadius: 10,
+            bgColor: "#0093dc",
+            padding: 5,
+            display: "ALWAYS",
+            textAlign: "center"
+          }
+        };
+        items.push(marker_item);
+        
+        var include = {
+          latitude: mapitems[i].wd,
+          longitude: mapitems[i].jd,
+        };
+        includes.push(include);
+      }
+      console.log(items);
+      console.log(includes);
+      this.setData({
+        includes:includes
+      })
+      return items;
+  },
+  //切换地图类别
+  changeMapKind:function(event){
+    var that = this;
+    //获取当前地图的类别索引号,从data里取出经纬度生成每个点,写入makers,
+    var index = event.currentTarget.dataset.index;
+    var markeritems = that.builderMarkers(that.data.mapData[index].MapItem);
+    that.setData({
+      markers: markeritems
+    });
+    //点击地图种类，字体变粗
+    that.setData({
+      mapKindFlag: index
+    })
 
   },
   /*地图详情 */
-  ToMapDetail: function () {
-    wx.navigateTo({
+  toMapDetail: function () {
+    /*wx.navigateTo({
       url: '/pages/mapDetail/mapDetail',
-    })
+    })*/
+    console.log("toMapDetail");
   },
-  /*切换种类 */
-  switch: function (e) {
-
-  }
+  
+  
 })

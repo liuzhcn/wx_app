@@ -1,10 +1,13 @@
 /* pages/map/map.wxss */
 /*导航的每个小块*/
 .top_navi_son{
-  padding: 5px 20px;
+  padding: 5px 10px;
   /* width: 100px; */
   display: inline-block;
   color: #ffffff;
+  margin-left:5px;
+  margin-right:5px;
+  margin-bottom: 3px;
 }
 
 .contain_view{
@@ -26,6 +29,6 @@
 }
 .choose{
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 900;
   border-bottom: 2px solid white;
 }
