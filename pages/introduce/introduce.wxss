@@ -1,5 +1,7 @@
 /* pages/introduce/introduce.wxss */
 
+@import "/wxParse/wxParse.wxss";
+
 page,
 .page,
 .page__bd{

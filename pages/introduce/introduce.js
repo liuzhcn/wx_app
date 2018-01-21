@@ -1,5 +1,7 @@
 // pages/introduce/introduce.js
 
+var WxParse = require('../../wxParse/wxParse.js');
+
 var sliderWidth = 96;
 
 Page({
@@ -11,8 +13,11 @@ Page({
       tabs:["学校介绍","百年校史","现任领导","华大标识"],
       activeIndex : 0,
       sliderOffset : 0,
-      sliderLeft : 0
-
+      sliderLeft : 0,
+      introduceText:'',
+      historyText:'',
+      leadersText:'',
+      logoText:''  
   },
 
   /**
@@ -27,6 +32,21 @@ Page({
           sliderOffset: res.windowWidth / that.data.tabs.length * that.data.activeIndex
         });
       }
+    });
+
+    wx.request({
+        url: 'https://wxapp.ccnu.edu.cn/wxapp/schoolInfo/api/info?type=0',
+        success:function(res){
+            console.log(res);
+            WxParse.wxParse('introduceText','html',res.data.content,that);
+        }
+    });
+    wx.request({
+        url: 'https://wxapp.ccnu.edu.cn/wxapp/schoolInfo/api/info?type=1',
+        success: function (res) {
+            console.log(res);
+            WxParse.wxParse('historyText', 'html', res.data.content, that);
+        }
     });
   
   },
