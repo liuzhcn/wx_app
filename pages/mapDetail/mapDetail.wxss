@@ -1,6 +1,6 @@
 /* pages/mapDetail/mapDetail.wxss */
 .contain{
-  
+  overflow: hidden;
   width: 100%;
   height: 600px;
 }

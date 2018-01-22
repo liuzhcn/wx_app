@@ -27,7 +27,7 @@
                 </view>
 
 
-                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+                <!-- <view class="weui-tab__content" hidden="{{activeIndex != 2}}"> 
                     <view class="weui-panel weui-panel_access">
                         <view class="weui-panel__hd">党委书记</view>
                         <view class="weui-panel__bd">
@@ -150,12 +150,12 @@
                         </view>
 
                     </view>
-                </view>
+                </view>-->
 
 
 
 
-                <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
                     <view class="weui-article">
                        
                         <view class="weui-article__section">

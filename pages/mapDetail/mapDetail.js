@@ -5,16 +5,40 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    info:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    console.log(options);
+    var that = this;
+    var mapKindFlag = options.mapKindFlag;
+    var markerId = options.markerId;
+    //读缓存
+    wx.getStorage({
+      key: 'mapInfo',
+      success: function(res) {
+        console.log(res.data[mapKindFlag].MapItem[markerId]);
+        that.setData({
+          info: res.data[mapKindFlag].MapItem[markerId]
+        })
+      },
+    })
   },
-
+  checkRoute:function(){
+    var latitude = parseFloat(this.data.info.wd);
+    var longitude = parseFloat(this.data.info.jd);
+    var name = this.data.info.name;
+    console.log(latitude);
+    console.log(longitude);
+    wx.openLocation({
+      latitude: latitude,
+      longitude: longitude,
+      name: name
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

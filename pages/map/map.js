@@ -21,20 +21,22 @@ Page({
    */
   onLoad: function (options) {
     this.loadMap();
+    this.mapCtx = wx.createMapContext('map');
+    
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.includePoints();
   },
 
   /**
@@ -83,6 +85,11 @@ Page({
          that.setData({
             mapData : res.data,
             markers : markeritems
+         });
+         //写入缓存
+         wx.setStorage({
+           key: 'mapInfo',
+           data: res.data,
          })
        },
        fail: function () {
@@ -142,15 +149,31 @@ Page({
     that.setData({
       mapKindFlag: index
     })
-
+    // that.includePoints();
   },
   /*地图详情 */
-  toMapDetail: function () {
-    /*wx.navigateTo({
-      url: '/pages/mapDetail/mapDetail',
-    })*/
+  toMapDetail: function (event) {
+    console.log(event);
+    //传2个参数，1、地图种类索引，2、markerId
+    let mapKindFlag = this.data.mapKindFlag;
+    console.log("mapKindFlag " + mapKindFlag);
+    console.log("event.markerId " + event.markerId);
+    wx.navigateTo({
+      url: '/pages/mapDetail/mapDetail?mapKindFlag=' + mapKindFlag + '&markerId=' + event.markerId,
+    })
     console.log("toMapDetail");
   },
-  
-  
+  /*选择地图 */
+  chooseLocation:function(event){
+      console.log(event);
+
+  },
+  /*自动缩放视界，适应所有地图上的所有标注点*/
+  includePoints: function () {
+    var that = this;
+    that.mapCtx.includePoints({
+      padding: [70],
+      points: that.data.includes
+    })
+  }
 })
