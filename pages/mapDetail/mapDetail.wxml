@@ -1,8 +1,12 @@
 <!--pages/mapDetail/mapDetail.wxml-->
 <view class="contain">
-    <image src="/images/start.jpg" mode='aspectFill' class="bg-img"></image>
+     <!-- <image src="/images/start.jpg" mode='aspectFill' class="bg-img"></image>  -->
     <view class='cover_view'>
-        <view class="text">{{info.name}} 位于北纬 {{info.jd}}度 ,东经 {{info.wd}}度</view>
+        <view class="text">{{info.remark ? info.remark : "暂无简介"}}</view>
+        <view  style="text-align:center;" wx:if="{{!(info.img) || (info.img.length == 0)}}">暂无图片信息</view>
+        <block wx:for="{{info.img}}" wx:key="*this" wx:for-item="item">
+            <image mode="aspectFit" class="info_img" src="{{'https://wxapp.ccnu.edu.cn/wxapp/resource/showImg?path=' + item.imgPath}}"></image>
+        </block>
         <view style='text-align:center'>
           <button class="mini-btn button" type="default" size="mini" bindtap="checkRoute">查看路线</button>
         </view>
