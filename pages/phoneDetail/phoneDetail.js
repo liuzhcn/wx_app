@@ -8,7 +8,9 @@ Page({
     info:{
      groupName: '',
      name: '',
-     tel: ''
+     tel: '',
+     tel1: '',
+     tel2: ''
     }
   },
   add_phone:function() {
@@ -16,20 +18,22 @@ Page({
     wx.addPhoneContact({
       firstName: that.data.info.name,
       remark: that.data.info.groupName,
-      mobilePhoneNumber:that.data.info.tel
+      mobilePhoneNumber:that.data.info.tel,
+      workPhoneNumber: that.data.info.tel1,
+      homePhoneNumber: that.data.info.tel2,
     })
   },
   call:function(event) {
     var that = this;
-    console.log(that.data.info.tel);
+    var tel = event.currentTarget.dataset.tel;
     wx.showModal({
       title: '提示',
-      content: "确认拨打 " + that.data.info.tel + " 吗？",
+      content: "确认拨打 " + tel + " 吗？",
       success: function (res) {
         if (res.confirm) {
           console.log('用户点击确定');
           wx.makePhoneCall({
-            phoneNumber: that.data.info.tel
+            phoneNumber: tel
           })
         } else if (res.cancel) {
           console.log('用户点击取消')

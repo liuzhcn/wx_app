@@ -35,19 +35,21 @@ Page({
     });
 
     wx.request({
-        url: 'https://wxapp.ccnu.edu.cn/wxapp/schoolInfo/api/info?type=0',
+        url: 'https://wxapp.ccnu.edu.cn/wxapp/schoolInfo/api/info',
         success:function(res){
             console.log(res);
-            WxParse.wxParse('introduceText','html',res.data.content,that);
+            WxParse.wxParse('introduceText', 'html', res.data.introduceText,that);
+            WxParse.wxParse('historyText', 'html', res.data.historyText, that);
+            WxParse.wxParse('logoText', 'html', res.data.logoText, that);
         }
     });
-    wx.request({
-        url: 'https://wxapp.ccnu.edu.cn/wxapp/schoolInfo/api/info?type=1',
-        success: function (res) {
-            console.log(res);
-            WxParse.wxParse('historyText', 'html', res.data.content, that);
-        }
-    });
+    // wx.request({
+    //     url: 'https://wxapp.ccnu.edu.cn/wxapp/schoolInfo/api/info?type=1',
+    //     success: function (res) {
+    //         console.log(res);
+    //         WxParse.wxParse('historyText', 'html', res.data.content, that);
+    //     }
+    // });
   
   },
 

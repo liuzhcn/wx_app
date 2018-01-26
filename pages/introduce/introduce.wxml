@@ -13,12 +13,10 @@
             </view>
             <scroll-view class="weui-tab__panel" style='height:100%;' scroll-y>
                 <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
-
                     <view class="weui-article">
                        <template is="wxParse" data="{{wxParseData:introduceText.nodes}}"/>
                     </view>
                 </view>
-
 
                 <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
                     <view class="weui-article">
@@ -26,7 +24,11 @@
                     </view>
                 </view>
 
-
+                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+                    <view class="weui-article">
+                        <template is="wxParse" data="{{wxParseData:logoText.nodes}}"/>
+                    </view>
+                </view>
                 <!-- <view class="weui-tab__content" hidden="{{activeIndex != 2}}"> 
                     <view class="weui-panel weui-panel_access">
                         <view class="weui-panel__hd">党委书记</view>
@@ -155,7 +157,7 @@
 
 
 
-                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+                <!-- <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
                     <view class="weui-article">
                        
                         <view class="weui-article__section">
@@ -250,7 +252,7 @@
                         
                     </view>
 
-                </view>
+                </view> -->
             </scroll-view>
         </view>
     </view>

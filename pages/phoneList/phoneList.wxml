@@ -8,7 +8,7 @@
         <view class="kind-list__item-bd {{item.open ? 'kind-list__item-bd_show' : ''}}">
           <view class="weui-cells {{item.open ? 'weui-cells_show' : ''}}">
             <block wx:for="{{item.contacts}}" wx:for-item="contacts_son" wx:key="{{contacts_son.id}}">
-              <navigator url="/pages/phoneDetail/phoneDetail?groupName={{item.groupName}}&name={{contacts_son.name}}&tel={{contacts_son.tel}}" class="weui-cell weui-cell_access">
+              <navigator url="/pages/phoneDetail/phoneDetail?groupName={{item.groupName}}&name={{contacts_son.name}}&tel={{contacts_son.tel}}&tel1={{contacts_son.tel1}}&tel2={{contacts_son.tel2}}" class="weui-cell weui-cell_access">
                 <view class="weui-cell__bd fontSize">{{contacts_son.name}}</view>
                 <view class="weui-cell__ft weui-cell__ft_in-access"></view>
               </navigator>
