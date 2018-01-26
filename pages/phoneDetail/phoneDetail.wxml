@@ -28,25 +28,19 @@
   </view>
 
   <view class="weui-cell padding"  wx:if="{{(info.tel != 'null') && (info.tel != '')}}" data-tel="{{info.tel}}" bindtap="call">
-    <view class="weui-cell__hd">
-      
-    </view>
-   
+    <view class="weui-cell__hd"></view>
+   <view class="weui-cell__bd"></view>
     <view class="weui-cell__ft">{{info.tel != "null" ? info.tel : ""}}</view>
   </view>
 
   <view class="weui-cell padding" wx:if="{{(info.tel1 != 'null') && (info.tel1 != '')}}" data-tel="{{info.tel1}}" bindtap="call">
-    <view class="weui-cell__hd">
-     
-    </view>
+    <view class="weui-cell__hd"></view>
     <view class="weui-cell__bd"></view>
     <view class="weui-cell__ft">{{info.tel1 != "null" ? info.tel1 : ""}}</view>
   </view>
 
   <view class="weui-cell padding" wx:if="{{(info.tel2 != 'null') && (info.tel2 != '')}}" data-tel="{{info.tel2}}" bindtap="call">
-    <view class="weui-cell__hd">
-      
-    </view>
+    <view class="weui-cell__hd"></view>
     <view class="weui-cell__bd"></view>
     <view class="weui-cell__ft">{{info.tel2 != "null" ? info.tel2 : ""}}</view>
   </view>
