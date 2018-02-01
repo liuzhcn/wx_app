@@ -1,1 +1,4 @@
 /**index.wxss**/
+.shadow{
+  box-shadow: 5px 8px 1px 0px rgb(46,114,170);
+}

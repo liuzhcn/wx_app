@@ -12,9 +12,9 @@
   </view>
 </view>
 -->
-<view style='height:100%;position:absolute;left:0px;right:0px;top:0px;bottom:0px;'>
+<!-- <view style='height:100%;position:absolute;left:0px;right:0px;top:0px;bottom:0px;'>
   <image src='/images/start.jpg' style='width:100%;height:100%;' mode='aspectFill'>
-    <image src='/images/logo.png' mode='widthFix' style="position:absolute;margin:auto;top:50px;left:0px;right:0px;"></image>
+     <image src='/images/logo.png' mode='widthFix' style="position:absolute;margin:auto;top:50px;left:0px;right:0px;"></image> 
     <navigator url="/pages/introduce/introduce" style="position:absolute;margin:auto;top:180px;left:60px;right:60px;">
       <button style='opacity:0.7;'>学校概况</button>
     </navigator>
@@ -22,4 +22,15 @@
       <button style='opacity:0.7;'>校园导览</button>
     </navigator>
   </image>
+</view> -->
+
+<view style='height:100%;position:absolute;left:0px;right:0px;top:0px;bottom:0px;overflow:hidden;'>
+    <image src='/images/fengmain4.jpg'  class="fengmian" style='width:100%;height:100%;margin-bottom:0rpx' mode='widthFix'></image>
+    <image src='/images/logo.png' mode='widthFix' style="position:absolute;top:20rpx;left:0px;right:0px;margin:auto;width:350rpx;"></image> 
+    <navigator url="/pages/introduce/introduce">
+        <image src="/images/xuexiaogaikuang.png" class="shadow" mode="widthFix" style="width:270rpx;position:absolute;left:240rpx;right240rpx;bottom:200rpx;"></image>
+    </navigator>
+    <navigator url="/pages/map/map">
+        <image src="/images/xiaoyuandaolan.png" class="shadow" mode="widthFix" style="width:270rpx;position:absolute;left:240rpx;right240rpx;bottom:80rpx;"></image>
+    </navigator>   
 </view>
