@@ -1,0 +1,5 @@
+<!--pages/activity/spring.wxml-->
+<view class="contain">
+  <image class="qidongye" src="https://wxapp.ccnu.edu.cn/wxapp/resource/showImg?path=/spring/12.jpg" mode="widthFix"></image>
+  <button class="yaoyiyao_btn" bindtap="yaoyiyao">开始摇一摇</button>
+</view>

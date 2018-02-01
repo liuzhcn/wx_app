@@ -1,0 +1,4 @@
+<!--pages/activity/spring_detail.wxml-->
+<view class="contain">
+  <image class="qian" src="{{'https://wxapp.ccnu.edu.cn/wxapp/resource/showImg?path=/spring/' + num + '.jpg'}}"></image>
+</view> 

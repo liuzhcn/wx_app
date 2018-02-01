@@ -12,6 +12,9 @@
         "pages/regist/regist",
         "pages/activity/small_target",
         "pages/activity/test",
+        "pages/activity/spring",
+        "pages/activity/spring_detail",
+
         "pages/phone/phone",
         "pages/phoneList/phoneList",
         "pages/phoneDetail/phoneDetail",
@@ -41,7 +44,7 @@
                 "selectedIconPath": "images/app_selected.png"
             },
             {
-                "pagePath": "pages/activity/test",
+                "pagePath": "pages/activity/spring",
                 "text": "校园活动",
                 "iconPath": "images/activity.png",
                 "selectedIconPath": "images/activity_selected.png"
