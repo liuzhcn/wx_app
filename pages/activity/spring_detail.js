@@ -15,10 +15,21 @@ Page({
     var num = Number(options.num);
     this.setData({
       num:num
+    });
+    const innerAudioContext = wx.createInnerAudioContext();
+    innerAudioContext.autoplay = true;
+    innerAudioContext.src = "https://wxapp.ccnu.edu.cn/wxapp/resource/showMusic?path=/spring/r.mp3";
+    innerAudioContext.onPlay(() => {
+      console.log('开始播放')
     })
-
+    innerAudioContext.onError((res) => {
+      console.log(res.errMsg)
+      console.log(res.errCode)
+    })
+    wx.showShareMenu({
+      withShareTicket: true
+    })
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -64,8 +75,42 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
-  }
+  onShareAppMessage: function (res) {
+    console.log(res);
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: '我在华师小程序玩新年抽签活动,快来一起玩吧！',
+      path: '/pages/activity/spring',
+      success: function (res) {
+        console.log(res);
+        // 转发成功
+        wx.showToast({
+          title: '转发成功',
+          icon: 'success',
+          duration: 2000
+        })
+      },
+      fail: function (res) {
+        console.log(res);
+        wx.showToast({
+          title: '转发失败',
+          icon: 'success',
+          duration: 2000
+        })
+      }
+    }
+  },
+  // 自定义方法，回到上一页再抽，
+  zaichou:function(){
+    console.log("666666666666");
+    wx.navigateBack({
+      delta: 1
+    })
+  },
+  //分享抽到的签
+  
 
 })

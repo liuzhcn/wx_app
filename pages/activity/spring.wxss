@@ -2,18 +2,69 @@
 .contain{
   width: 100%;
   height: 100%;
+    overflow: hidden;
+    margin-top: -20rpx;  
+   margin-bottom: -20rpx;  
 }
 .qidongye{
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  margin-bottom: -10rpx;
+  overflow: hidden;  
+  margin-top: -10rpx; 
+  margin-bottom: -30rpx; 
 }
 .yaoyiyao_btn{
   position: absolute;
-  bottom: 100rpx;
-  left: 200rpx;
-  right: 200rpx;
-  width: 350rpx;
-  background-color: rgba(255,255,255,0.3);
+  bottom: 180rpx;
+  left: 250rpx;
+  right: 250rpx;
+  width: 250rpx;
+  background-color: rgba(255,0,0,0.5);
+  color: #FBE7C4;
 }
+.zhezhaoceng{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right:0px;
+  bottom: 0px;
+  background-color: rgba(0,0,0,0.5);
+}
+.zhezhaoimg{
+  width: 224rpx;
+  height: 516rpx;
+  position: absolute;
+  left: 263rpx;
+  top: 100rpx;
+  transform-origin: 50% 85%;
+  animation: shake-rotate 0.8s ease 0s infinite;
+}
+@keyframes shake-rotate {
+				0% {
+					-webkit-transform: rotate(0deg);
+				}
+				12.5% {
+					-webkit-transform: rotate(15deg);
+				}
+				25% {
+					-webkit-transform: rotate(30deg);
+				}
+				37.5% {
+					-webkit-transform: rotate(15deg);
+				}
+				50% {
+					-webkit-transform: rotate(0deg);
+				}
+				62.5% {
+					-webkit-transform: rotate(-15deg);
+				}
+				75% {
+					-webkit-transform: rotate(-30deg);
+				}
+				87.5% {
+					-webkit-transform: rotate(-15deg);
+				}
+				100% {
+					-webkit-transform: rotate(0deg);
+				}
+			}
