@@ -1,11 +1,12 @@
 // pages/activity/spring_detail.js
+const innerAudioContext = wx.createInnerAudioContext();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    num:1
+    num: 1
   },
 
   /**
@@ -14,11 +15,10 @@ Page({
   onLoad: function (options) {
     var num = Number(options.num);
     this.setData({
-      num:num
+      num: num
     });
-    const innerAudioContext = wx.createInnerAudioContext();
-    innerAudioContext.autoplay = true;
     innerAudioContext.src = "https://wxapp.ccnu.edu.cn/wxapp/resource/showMusic?path=/spring/r.mp3";
+    innerAudioContext.play();
     innerAudioContext.onPlay(() => {
       console.log('开始播放')
     })
@@ -55,7 +55,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    innerAudioContext.destroy();
   },
 
   /**
@@ -104,13 +104,13 @@ Page({
     }
   },
   // 自定义方法，回到上一页再抽，
-  zaichou:function(){
+  zaichou: function () {
     console.log("666666666666");
     wx.navigateBack({
       delta: 1
     })
   },
   //分享抽到的签
-  
+
 
 })
