@@ -1,6 +1,6 @@
 <view class="page">
     
-    <image mode='widthFix' style='width:100%;' src='/images/app-title.png'></image>
+    <image mode='widthFix' style='width:100%;' src='/images/app-title.jpg'></image>
     
     <view class="page__bd">
         <view class="weui-grids">
