@@ -1,6 +1,8 @@
 // pages/map/map.js
 Page({
   data: {
+    latitude: 30.517330,
+    longitude: 114.360600,
     mapData:[],
     markers: [],
     mapKindFlag:0,
