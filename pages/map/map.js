@@ -106,7 +106,7 @@ Page({
       for(var i=0;i<mapitems.length;i++){
         console.log(mapitems[i]);
         var marker_item = {
-          iconPath: "/images/location-640.png",
+          iconPath: "",
           id: i,
           latitude: mapitems[i].wd,
           longitude: mapitems[i].jd,
@@ -115,10 +115,10 @@ Page({
           callout: {
             content: mapitems[i].name,
             color: "#FFFFFF",
-            fontSize: 12,
-            borderRadius: 10,
+            fontSize: 16,
+            borderRadius: 3,
             bgColor: "#0093dc",
-            padding: 5,
+            padding: 10,
             display: "ALWAYS",
             textAlign: "center"
           }
