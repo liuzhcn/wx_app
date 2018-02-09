@@ -110,8 +110,9 @@ Page({
           id: i,
           latitude: mapitems[i].wd,
           longitude: mapitems[i].jd,
-          width: 20,
-          height: 20,
+          width: 0,
+          height: 0,
+          alpha:0,
           callout: {
             content: mapitems[i].name,
             color: "#FFFFFF",
