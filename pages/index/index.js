@@ -5,7 +5,7 @@ const app = getApp()
 
 Page({
   data: {
-   
+   isShow:false
   },
  
   onLoad: function () {
@@ -34,6 +34,11 @@ Page({
               })
           }
       })
+  },
+  onReady:function(){
+    this.setData({
+      isShow:true
+    })
   }
 
 })

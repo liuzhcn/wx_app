@@ -4,8 +4,13 @@ var map_api_url = 'https://wxapp.ccnu.edu.cn/wxapp/map/api';
 
 Page({
   data: {
+//华师坐标
     latitude:29.710460,
     longitude: 115.995400,  
+//九江学院坐标
+    // latitude: 30.517330,
+    // longitude: 114.360600,
+
     mapData:[],
     markers: [],
     mapKindFlag:0,
@@ -113,15 +118,16 @@ Page({
           id: i,
           latitude: mapitems[i].wd,
           longitude: mapitems[i].jd,
-          width: 20,
-          height: 20,
+          width: 0,
+          height: 0,
+          alpha:0,
           callout: {
             content: mapitems[i].name,
             color: "#FFFFFF",
-            fontSize: 12,
-            borderRadius: 10,
+            fontSize: 16,
+            borderRadius: 3,
             bgColor: "#0093dc",
-            padding: 5,
+            padding: 10,
             display: "ALWAYS",
             textAlign: "center"
           }

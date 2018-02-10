@@ -1,5 +1,5 @@
 // pages/activity/spring_detail.js
-const innerAudioContext = wx.createInnerAudioContext();
+
 Page({
 
   /**
@@ -13,6 +13,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    const innerAudioContext = wx.createInnerAudioContext();
     var num = Number(options.num);
     this.setData({
       num: num
@@ -20,7 +21,11 @@ Page({
     innerAudioContext.src = "https://wxapp.ccnu.edu.cn/wxapp/resource/showMusic?path=/spring/r.mp3";
     innerAudioContext.play();
     innerAudioContext.onPlay(() => {
-      console.log('开始播放')
+      console.log('开始播放');
+      setTimeout(function(){
+        innerAudioContext.stop();
+        innerAudioContext.destroy();
+      },1500)
     })
     innerAudioContext.onError((res) => {
       console.log(res.errMsg)
@@ -55,7 +60,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    innerAudioContext.destroy();
+    // innerAudioContext.destroy();
   },
 
   /**
