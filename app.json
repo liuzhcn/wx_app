@@ -1,11 +1,12 @@
 {
     "pages": [
         "pages/index/index",
+        "pages/map/map",
         "pages/logs/logs",
         "pages/me/me",
         "pages/apps/apps",
 
-        "pages/map/map",
+        
         "pages/mapDetail/mapDetail",
 
         "pages/introduce/introduce",

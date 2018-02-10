@@ -1,6 +1,11 @@
 // pages/map/map.js
+var map_api_url = 'https://wxapp.ccnu.edu.cn/wxapp/map/api';
+//var map_api_url = 'https://small.sibetech.cn/wxapp/map/api';
+
 Page({
   data: {
+    latitude:29.710460,
+    longitude: 115.995400,  
     mapData:[],
     markers: [],
     mapKindFlag:0,
@@ -78,7 +83,7 @@ Page({
   loadMap: function () {
     var that = this;
      wx.request({
-       url: "https://wxapp.ccnu.edu.cn/wxapp/map/api",
+       url: map_api_url,
        success: function (res) {
          console.log(res.data);
          var markeritems = that.builderMarkers(res.data[0].MapItem);
@@ -104,7 +109,7 @@ Page({
       for(var i=0;i<mapitems.length;i++){
         console.log(mapitems[i]);
         var marker_item = {
-          iconPath: "/images/location-640.png",
+          iconPath: "",
           id: i,
           latitude: mapitems[i].wd,
           longitude: mapitems[i].jd,
