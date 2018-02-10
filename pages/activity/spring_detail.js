@@ -18,7 +18,7 @@ Page({
     this.setData({
       num: num
     });
-    innerAudioContext.src = "https://wxapp.ccnu.edu.cn/wxapp/resource/showMusic?path=/spring/r.mp3";
+    innerAudioContext.src = "/audios/r.mp3";
     innerAudioContext.play();
     innerAudioContext.onPlay(() => {
       console.log('开始播放');
