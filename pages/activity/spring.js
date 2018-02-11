@@ -43,6 +43,8 @@ Page({
       isShow: false,
       speed_flag: false
     });
+    innerAudioContext.loop = false;
+    innerAudioContext.stop();
     innerAudioContext.destroy();
   },
 
@@ -97,6 +99,14 @@ Page({
       console.log("speed2_12>" + speed2_1);
       if ((speed2_1 > 12) && (that.data.speed_flag == false)) {
         console.log("摇成功");
+        wx.stopAccelerometer({
+            success: function () {
+                
+            },
+            fail: function () {
+                console.log("fail to stopAccelerometer");
+            }
+        });
         
         that.setData({
           isShow: true,
@@ -106,31 +116,18 @@ Page({
         innerAudioContext.src = "/audios/s.mp3";
         innerAudioContext.play();
         setTimeout(function(){
-          speed1 = { x: 0, y: 0, z: 0 };
-          speed2 = { x: 0, y: 0, z: 0 };
-          speed2_1 = 0;
+          
           innerAudioContext.loop = false;
           innerAudioContext.stop();
           innerAudioContext.destroy();
-          that.setData({
-            isShow: false,
-            speed_flag: false
-          });
+
           let num = Math.ceil(10 * Math.random());
-          if (speed2_1 == 0){
-            wx.navigateTo({
+          wx.navigateTo({
               url: "/pages/activity/spring_detail?num=" + num,
-            });
-            wx.stopAccelerometer({
-                success: function () {
-                    console.log("stopAccelerometer");
-                },
-                fail: function () {
-                    console.log("fail to stopAccelerometer");
-                }
-            });
-          }
+          });
+
         },3000)
+        
       }
     });
   }

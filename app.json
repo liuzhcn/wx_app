@@ -1,7 +1,8 @@
 {
     "pages": [
-        "pages/index/index",
+       
         "pages/map/map",
+        "pages/index/index",
         "pages/logs/logs",
         "pages/me/me",
         "pages/apps/apps",
