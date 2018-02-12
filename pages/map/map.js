@@ -1,15 +1,15 @@
 // pages/map/map.js
-//var map_api_url = 'https://wxapp.ccnu.edu.cn/wxapp/map/api';
-var map_api_url = 'https://small.sibetech.cn/wxapp/map/api';
+var map_api_url = 'https://wxapp.ccnu.edu.cn/wxapp/map/api';
+//var map_api_url = 'https://small.sibetech.cn/wxapp/map/api';
 
 Page({
   data: {
 //华师坐标
-    // latitude:29.710460,
-    // longitude: 115.995400,  
+    latitude:29.710460,
+    longitude: 115.995400,  
 //九江学院坐标
-    latitude: 30.517330,
-    longitude: 114.360600,
+//  latitude: 30.517330,
+//  longitude: 114.360600,
 
     mapData:[],
     markers: [],

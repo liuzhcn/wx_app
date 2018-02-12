@@ -1,9 +1,9 @@
 <!--pages/activity/spring.wxml-->
 <view class="contain">
-  <image mode="widthFix" class="qidongye" src="https://wxapp.ccnu.edu.cn/wxapp/resource/showImg?path=/spring/12.jpg" ></image>
+  <image mode="widthFix" class="qidongye" src="/images/12.jpg" ></image>
   <!-- <button class="yaoyiyao_btn" bindtap="yaoyiyao">开始摇一摇</button> -->
   <!-- 遮罩层 -->
    <view class="zhezhaoceng" wx:if="{{isShow}}">
-    <image class="zhezhaoimg" src="https://wxapp.ccnu.edu.cn/wxapp/resource/showImg?path=/spring/14.png"></image>
+    <image class="zhezhaoimg" src="/images/14.png"></image>
   </view>   
 </view>
