@@ -6,6 +6,14 @@ Page({
      * 页面的初始数据
      */
     data: {
+      indicatorDots:true,
+      autoplay:true,
+      interval:5000,
+      duration:1000,
+      imgUrls:[
+        "/images/app-title.jpg",
+        "/images/app-title-2.jpg"
+      ],
         grids: [
             {
                 name: "校园卡",
