@@ -24,9 +24,27 @@ App({
       }
     })
   },
+/**华中师范大学数据 */
   globalData: {
     userInfo: null,
     appUserInfo: null,
-    token: null
+    token: null,
+    contextPath:'https://wxapp.ccnu.edu.cn/wxapp',
+    mapPoint:{
+        latitude: 30.517330,
+        longitude: 114.360600,
+    }
   }
+/** 九江学院数据
+    globalData: {
+      userInfo: null,
+      appUserInfo: null,
+      token: null,
+      contextPath: 'https://small.sibetech.cn/wxapp',
+      mapPoint: {
+          latitude: 29.710460,
+          longitude: 115.995400
+      }
+    }
+*/
 })

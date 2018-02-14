@@ -88,7 +88,7 @@ Page({
       console.log(res.target)
     }
     return {
-      title: '我在华中师大官方小程序抽到2018新年签，你也来试试看吧！',
+      title: '我在华中师大小程序抽到2018新年签,你也来试试！',
       path: '/pages/activity/spring',
       success: function (res) {
         console.log(res);

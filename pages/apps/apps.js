@@ -8,12 +8,19 @@ Page({
     data: {
       indicatorDots:true,
       autoplay:true,
-      interval:5000,
+      interval:3000,
       duration:1000,
-      imgUrls:[
-        "/images/app-title.jpg",
-        "/images/app-title-2.jpg"
+      images:[
+        {
+            id:'index',
+            url: "/images/app-title.jpg"
+        },
+        {
+            id:'activity',
+            url:"/images/app-title-2.jpg"
+        }
       ],
+      
         grids: [
             {
                 name: "校园卡",
@@ -132,5 +139,16 @@ Page({
             wx.navigateTo({url:'webapp?url='+appurl})
         }
         
+    },
+
+    onSwiperItemClicked:function(event){
+        var id = event.currentTarget.dataset.id;
+        
+        if(id == 'activity'){
+            console.log(id);
+            wx.switchTab({
+                url: '/pages/activity/spring'
+            })
+        }
     }
 })

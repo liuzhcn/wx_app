@@ -1,6 +1,6 @@
 <!--pages/activity/spring_detail.wxml-->
 <view class="contain">
-  <image class="qian" src="{{'https://wxapp.ccnu.edu.cn/wxapp/resource/showImg?path=/spring/' + num + '.jpg'}}"></image>
+  <image class="qian" src="{{'https://wxapp.ccnu.edu.cn/wxapp/resource/showImg?path=/spring/' + num + '.jpg'}}" mode='widthFix'></image>
   <!--不服再抽  -->
   <image class="left_img" bindtap="zaichou" src="https://wxapp.ccnu.edu.cn/wxapp/resource/showImg?path=/spring/11_1.jpg"></image>
   <!--分享  -->

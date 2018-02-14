@@ -1,16 +1,12 @@
 // pages/map/map.js
-var map_api_url = 'https://wxapp.ccnu.edu.cn/wxapp/map/api';
-//var map_api_url = 'https://small.sibetech.cn/wxapp/map/api';
+
+var appInstance = getApp();
+var map_api_url = appInstance.globalData.contextPath + '/map/api';
+
 
 Page({
   data: {
-//华师坐标
-    latitude:29.710460,
-    longitude: 115.995400,  
-//九江学院坐标
-//  latitude: 30.517330,
-//  longitude: 114.360600,
-
+    mapPoint: appInstance.globalData.mapPoint,
     mapData:[],
     markers: [],
     mapKindFlag:0,
@@ -118,16 +114,16 @@ Page({
           id: i,
           latitude: mapitems[i].wd,
           longitude: mapitems[i].jd,
-          width: 20,
-          height: 20,
-          alpha:1,
+          width: 1,
+          height: 1,
+          alpha:0,
           callout: {
             content: mapitems[i].name,
             color: "#FFFFFF",
-            fontSize: 16,
+            fontSize: 14,
             borderRadius: 3,
             bgColor: "#0093dc",
-            padding: 10,
+            padding: 5,
             display: "ALWAYS",
             textAlign: "center"
           }

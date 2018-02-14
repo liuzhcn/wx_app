@@ -2,9 +2,9 @@
 
   <!-- <image mode='widthFix' style='width:100%;' src='/images/app-title.jpg'></image> -->
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{imgUrls}}" wx:key="*this">
+    <block wx:for="{{images}}" wx:key="*this">
       <swiper-item>
-        <image src="{{item}}" class="slide-image" style="width:100%;" mode="widthFix" />
+        <image src="{{item.url}}" class="slide-image" style="width:100%;" mode="widthFix" data-id='{{item.id}}' bindtap='onSwiperItemClicked'/>
       </swiper-item>
     </block>
   </swiper>
