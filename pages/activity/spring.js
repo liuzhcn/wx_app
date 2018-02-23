@@ -187,7 +187,7 @@ Page({
           speed_flag: true
         });
         innerAudioContext.loop = true;
-        innerAudioContext.src = "https://wxapp.ccnu.edu.cn/wxapp/resource/showMusic?path=/spring/s.mp3";
+        innerAudioContext.src = "/images/s.mp3";
         innerAudioContext.play();
         setTimeout(function(){
           speed1 = { x: 0, y: 0, z: 0 };
