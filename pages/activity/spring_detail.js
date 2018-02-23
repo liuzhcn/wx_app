@@ -1,4 +1,5 @@
 // pages/activity/spring_detail.js
+const ctx = wx.createCanvasContext('myCanvas')
 
 Page({
 
@@ -18,7 +19,7 @@ Page({
     this.setData({
       num: num
     });
-    innerAudioContext.src = "/images/r.mp3";
+    innerAudioContext.src = "/audios/r.mp3";
     innerAudioContext.play();
     innerAudioContext.onPlay(() => {
       console.log('开始播放');
@@ -87,7 +88,7 @@ Page({
       console.log(res.target)
     }
     return {
-      title: '我在华师小程序玩新年抽签活动,快来一起玩吧！',
+      title: '我在华中师大小程序抽到2018新年签,你也来试试！',
       path: '/pages/activity/spring',
       success: function (res) {
         console.log(res);
@@ -116,6 +117,7 @@ Page({
     })
   },
   //分享抽到的签
+  //在画布上画2个图片，然后生成一张整图，保存到相册
 
 
 })
