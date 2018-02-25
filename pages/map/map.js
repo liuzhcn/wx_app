@@ -181,7 +181,7 @@ Page({
     console.log('call includePoints function...')
     var that = this;
     that.mapCtx.includePoints({
-      padding: [70],
+      padding: [50,50,50,50],
       points: that.data.includes
     })
   }
