@@ -24,7 +24,7 @@ App({
       }
     })
   },
-/**华中师范大学数据 */
+/**华中师范大学数据 
   globalData: {
     userInfo: null,
     appUserInfo: null,
@@ -35,7 +35,8 @@ App({
         longitude: 114.360600,
     }
   }
-/** 九江学院数据
+  */
+/** 九江学院数据*/
     globalData: {
       userInfo: null,
       appUserInfo: null,
@@ -46,5 +47,5 @@ App({
           longitude: 115.995400
       }
     }
-*/
+
 })

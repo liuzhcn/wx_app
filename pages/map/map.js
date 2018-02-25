@@ -42,7 +42,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.includePoints();
+//    this.includePoints();
   },
 
   /**
@@ -97,6 +97,8 @@ Page({
            key: 'mapInfo',
            data: res.data,
          })
+
+         that.includePoints();
        },
        fail: function () {
         console.log("failed to load mapData");
@@ -108,7 +110,6 @@ Page({
       var items = [];//地图上的每个小点
       var includes = [] ;//地图上点的经纬度
       for(var i=0;i<mapitems.length;i++){
-        console.log(mapitems[i]);
         var marker_item = {
           iconPath: "",
           id: i,
@@ -136,8 +137,8 @@ Page({
         };
         includes.push(include);
       }
-      console.log(items);
-      console.log(includes);
+  //    console.log(items);
+  //    console.log(includes);
       this.setData({
         includes:includes
       })
@@ -156,7 +157,7 @@ Page({
     that.setData({
       mapKindFlag: index
     })
-    // that.includePoints();
+    that.includePoints();
   },
   /*地图详情 */
   toMapDetail: function (event) {
@@ -177,6 +178,7 @@ Page({
   },
   /*自动缩放视界，适应所有地图上的所有标注点*/
   includePoints: function () {
+    console.log('call includePoints function...')
     var that = this;
     that.mapCtx.includePoints({
       padding: [70],
