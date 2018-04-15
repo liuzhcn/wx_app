@@ -10,14 +10,59 @@ Page({
    */
   data: {
     isShow: false,//true为显示遮罩层
-    speed_flag: false//true为摇成功了
+    speed_flag: false,//true为摇成功了
+    grids: [
+      {
+        name: "发展报告",
+        icon: "/images/fazhanbaogao.png",
+        type: "inner",
+        url: "",
+        auth: true
+      },
+      {
+        name: "会议报名",
+        icon: "/images/huiyibaoming.png",
+        type: "inner",
+        url: "",
+        auth: true
+      },
+      {
+        name: "会议签到",
+        icon: "/images/huiyiqiandao.png",
+        type: "web",
+        url: "",
+        auth: false
+      },
+      {
+        name: "会议相册",
+        icon: "/images/huiyixiangce.png",
+        type: "inner",
+        url: "",
+        auth: true
+      },
+      {
+        name: "会议宣言",
+        icon: "/images/huiyixuanyan.png",
+        type: "inner",
+        url: "",
+        auth: true
+      },
+      {
+        name: "会议议程",
+        icon: "/images/huiyiyicheng.png",
+        type: "inner",
+        url: "",
+        auth: true
+      }
+
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+
   },
 
   /**
@@ -71,10 +116,10 @@ Page({
   onShareAppMessage: function () {
 
   },
-  
+
   /*监听摇动事 */
-  startListen:function(){
-   
+  startListen: function () {
+
     var that = this;
     //进入页面就开始监控加速度
     var speed1 = { x: 0, y: 0, z: 0 };
@@ -93,33 +138,33 @@ Page({
       speed2_1 = Math.abs(speed2.x + speed2.y + speed2.z - speed1.x - speed1.y - speed1.z) / 0.2
       //速度超出阈值，则摇成功，停止监听加速度，播放摇一摇音乐，显示动画，3秒后停止播放摇一摇音乐，隐藏动画，跳转页面
       if ((speed2_1 > 12) && isListen) {
-        console.log("speed2_1="+speed2_1+",摇成功!");
+        console.log("speed2_1=" + speed2_1 + ",摇成功!");
         isListen = false;
         wx.stopAccelerometer({
-            success: function () {
-                
-            },
-            fail: function () {
-                console.log("fail to stopAccelerometer");
-            }
+          success: function () {
+
+          },
+          fail: function () {
+            console.log("fail to stopAccelerometer");
+          }
         });
-        
+
         that.setData({
           isShow: true,
           speed_flag: true
         });
 
         innerAudioContext.play();
-        setTimeout(function(){
+        setTimeout(function () {
           innerAudioContext.stop();
 
           let num = Math.ceil(10 * Math.random());
           wx.navigateTo({
-              url: "/pages/activity/spring_detail?num=" + num,
+            url: "/pages/activity/spring_detail?num=" + num,
           });
 
-        },3000)
-        
+        }, 3000)
+
       }
     });
   }
