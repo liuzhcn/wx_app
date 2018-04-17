@@ -1,0 +1,4 @@
+/* pages/activity/meeting/meeting-yicheng.wxss */
+.size{
+  width: 750rpx;
+}

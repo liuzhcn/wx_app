@@ -1,4 +1,5 @@
 // pages/activity/spring.js
+const app = getApp();
 const innerAudioContext = wx.createInnerAudioContext();
 innerAudioContext.loop = false;
 innerAudioContext.src = "/audios/s.mp3";
@@ -11,49 +12,58 @@ Page({
   data: {
     isShow: false,//true为显示遮罩层
     speed_flag: false,//true为摇成功了
+    isqiandao: "",
+    height:'',
     grids: [
+      {
+        name: "会议议程",
+        icon: "/images/huiyiyicheng.png",
+        type: "inner",
+        url: "/pages/activity/meeting/meeting-yicheng",
+        auth: true,
+        style: "padding:20px 0px 20px 40px"
+      },
       {
         name: "发展报告",
         icon: "/images/fazhanbaogao.png",
         type: "inner",
-        url: "",
-        auth: true
+        url: "/pages/activity/meeting/meeting-baogao",
+        auth: true,
+        style: "padding:20px 40px 20px 0"        
       },
       {
-        name: "会议报名",
-        icon: "/images/huiyibaoming.png",
+        name: "会议宣言",
+        icon: "/images/huiyixuanyan.png",
         type: "inner",
-        url: "",
-        auth: true
-      },
-      {
-        name: "会议签到",
-        icon: "/images/huiyiqiandao.png",
-        type: "web",
-        url: "",
-        auth: false
+        url: "/pages/activity/meeting/meeting-xuanyan",
+        auth: true,
+        style: "padding:20px 0px 20px 40px"        
       },
       {
         name: "会议相册",
         icon: "/images/huiyixiangce.png",
         type: "inner",
         url: "",
-        auth: true
+        auth: true,
+        style: "padding:20px 40px 20px 0"        
       },
-      {
-        name: "会议宣言",
-        icon: "/images/huiyixuanyan.png",
-        type: "inner",
-        url: "",
-        auth: true
-      },
-      {
-        name: "会议议程",
-        icon: "/images/huiyiyicheng.png",
-        type: "inner",
-        url: "",
-        auth: true
-      }
+      // {
+      //   name: "会议报名",
+      //   icon: "/images/huiyibaoming.png",
+      //   type: "inner",
+      //   url: "/pages/activity/meeting/meeting-baoming",
+      //   auth: true
+      // },
+      // {
+      //   name: "会议签到",
+      //   icon: "/images/huiyiqiandao.png",
+      //   type: "web",
+      //   url: "/pages/activity/meeting/meeting-qiandao",
+      //   auth: false
+      // },
+     
+     
+      
 
     ]
   },
@@ -62,7 +72,50 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let that = this;
+    
 
+    //看用户 的校园活动是否已签到
+    wx.login({
+      success: function (res) {
+        console.log(res.code);
+        wx.request({
+          url: app.globalData.api.isQiandao + "?code=" + res.code,
+          method: 'POST',
+          dataType: 'json',
+          success: function (res) {
+            console.log(res.data);
+            if (res.data.errcode == '0' && res.data.sign != null) {//说明已经签到了，直接进入四宫格界面
+                // app.globalData.qiandao == true;
+                app.globalData.sign = res.data.sign;
+            } else {//否则没签到，进入签到页面，填表
+              // app.globalData.qiandao == false;
+              wx.reLaunch({
+                url: '/pages/activity/meeting/meeting-qiandaoanniu'
+              })
+            }
+          },
+          fail: function (res) {
+            console.log(res);
+           }
+        })
+      }
+    })
+
+    
+    // this.setData({
+    //   isqiandao: app.globalData.qiandao
+    // })
+    // if (this.data.isqiandao == true) {
+    //   wx.reLaunch({
+    //     url: '/pages/activity/spring'
+    //   })
+    // }
+    // if (this.data.isqiandao == false) {
+    //   wx.reLaunch({
+    //     url: '/pages/activity/meeting/meeting-qiandaoanniu'
+    //   })
+    // }
   },
 
   /**
@@ -76,17 +129,17 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.startListen();
+    // this.startListen();
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    this.setData({
-      isShow: false,
-      speed_flag: false
-    });
+    // this.setData({
+    //   isShow: false,
+    //   speed_flag: false
+    // });
   },
 
   /**
@@ -116,7 +169,13 @@ Page({
   onShareAppMessage: function () {
 
   },
-
+  openApp: function (e) {
+    //打开
+    let url = e.currentTarget.dataset.url;
+    wx.navigateTo({
+      url: url
+    })
+  },
   /*监听摇动事 */
   startListen: function () {
 

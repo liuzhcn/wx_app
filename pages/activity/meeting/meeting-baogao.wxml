@@ -1,0 +1,2 @@
+<!--pages/activity/meeting/meeting-baogao.wxml-->
+ <web-view class='size' src="{{url}}"></web-view> 

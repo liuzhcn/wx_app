@@ -34,6 +34,8 @@ Page({
               })
           }
       })
+
+
   },
   onReady:function(){
     this.setData({

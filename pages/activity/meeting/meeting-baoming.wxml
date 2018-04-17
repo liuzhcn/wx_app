@@ -1,0 +1,95 @@
+<view style='position:relative;'>
+  <image src='/images/main-bg.jpg' style='width:750rpx;height:{{height}}px'></image>
+  <view class="page biaodan">
+    <view class="page__bd add_contain">
+      <view class="weui-cells weui-cells_after-title border_radius">
+
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">姓名：</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" bindinput='setName' placeholder="请输入姓名" />
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_select">
+          <view class="weui-cell__hd weui-cell__hd_in-select-after">
+            <view class="weui-label">单位：</view>
+          </view>
+          <view class="weui-cell__bd">
+            <!-- <picker bindchange="chooseDanwei1" value="{{danwei1_index}}" range="{{danwei1}}">
+              <view class="weui-select weui-select_in-select-after">{{danwei1[danwei1_index]}}</view>
+            </picker> -->
+            <input class="weui-input" bindinput='setDanwei2' placeholder="请输入单位" />
+          </view>
+        </view>
+
+        <!-- <view class="weui-cell weui-cell_select">
+          <view class="weui-cell__hd weui-cell__hd_in-select-after">
+            <view class="weui-label"></view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" bindinput='setDanwei2' placeholder="请输入单位" />
+          </view>
+        </view> -->
+
+
+
+        <!-- <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">职务：</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" bindinput='setZhiwu' placeholder="请输入职务" />
+          </view>
+        </view> -->
+
+
+
+
+        <view class="weui-cell weui-cell_select">
+          <view class="weui-cell__hd weui-cell__hd_in-select-after">
+            <view class="weui-label">是否领奖代表：</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker bindchange="chooseLJ" value="{{linjiang_index}}" range="{{linjiang}}">
+              <view class="weui-select weui-select_in-select-after">{{linjiang[linjiang_index]}}</view>
+            </picker>
+          </view>
+        </view>
+
+        <view wx:if="{{isShowJx}}" class="weui-cell weui-cell_select">
+          <view class="weui-cell__hd weui-cell__hd_in-select-after">
+            <view class="weui-label">所获奖项：</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker bindchange="chooseJx1" value="{{jiangxiang1_index}}" range="{{jiangxiang1}}" range-key='name'>
+              <view class="weui-select">{{jiangxiang1[jiangxiang1_index].name}}</view>
+            </picker>
+          </view>
+        </view>
+
+        <view wx:if="{{isShowJx}}" class="weui-cell weui-cell_select">
+          <!-- <view class="weui-cell__hd weui-cell__hd_in-select-after">
+            <view class="weui-label">1</view>
+          </view> -->
+          <view class="weui-cell__bd" style='text-align:center;'>
+            <picker bindchange="chooseJx2" value="{{jiangxiang2_index}}" range="{{jiangxiang2}}" range-key="name">
+              <view class="weui-select">{{jiangxiang2[jiangxiang2_index].name}}</view>
+            </picker>
+          </view>
+        </view>
+
+
+
+
+      </view>
+
+      <view class="weui-btn-area">
+        <button class="weui-btn btn2" hover-class='btn1' type="primary" bindtap="submit">提交</button>
+      </view>
+    </view>
+  </view>
+
+</view>

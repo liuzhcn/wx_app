@@ -1,0 +1,6 @@
+<!--pages/activity/meeting/meeting-xuanyan.wxml-->
+<!-- <view class='view'>  -->
+  <image style='width:750rpx;height:{{height}}px' class='img' src='/images/xuanyan.jpg'></image> 
+  <scroll-view scroll-y class='anniu_view'>{{list ? list :"暂无数据"}}</scroll-view>
+  <view class='zhiwen' bindlongtap='xuanyan'></view>
+<!-- </view> -->

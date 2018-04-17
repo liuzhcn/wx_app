@@ -13,8 +13,15 @@
         "pages/regist/regist",
         "pages/activity/small_target",
         "pages/activity/test",
-        "pages/activity/spring",
+        "pages/activity/spring",        
         "pages/activity/spring_detail",
+
+        "pages/activity/meeting/meeting-baoming",
+        "pages/activity/meeting/meeting-qiandaoanniu",
+        "pages/activity/meeting/meeting-qiandao",    
+        "pages/activity/meeting/meeting-xuanyan",
+        "pages/activity/meeting/meeting-baogao",
+        "pages/activity/meeting/meeting-yicheng",
 
         "pages/phone/phone",
         "pages/phoneList/phoneList",

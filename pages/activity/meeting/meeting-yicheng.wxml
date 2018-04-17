@@ -1,0 +1,2 @@
+<!--pages/activity/meeting/meeting-yicheng.wxml-->
+ <web-view class='size' src="{{url}}"></web-view> 

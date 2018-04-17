@@ -1,0 +1,8 @@
+<!--pages/activity/meeting/meeting-qiandaoanniu.wxml-->
+<view class='view'> 
+  <image style='width:750rpx;height:{{height}}px' src='/images/qiandao_bg.jpg'></image>
+  <view class='anniu_view'>
+    <image class='qiandao_anniu' src='/images/qiandao_anniu.png' bindtap='toBiaodan'></image>
+  </view>
+  
+</view>

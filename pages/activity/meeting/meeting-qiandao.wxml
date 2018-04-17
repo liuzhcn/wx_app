@@ -1,0 +1,4 @@
+<!--pages/activity/meeting/meeting-qiandao.wxml-->
+<view>
+  <image src='/images/qiandao_bg.jpg'></image>
+</view>

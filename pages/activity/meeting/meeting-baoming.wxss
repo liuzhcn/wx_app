@@ -1,0 +1,33 @@
+/* pages/activity/meeting/meeting-baoming.wxss */
+/* .add_contain .weui-label{
+  width: 135px;
+  text-align: right;
+} */
+.biaodan{
+  position: absolute;
+  top: 350rpx;
+  width: 650rpx;
+  margin-left:50rpx;
+ 
+}
+.border_radius{
+ overflow: hidden;
+  border-radius:10px; 
+  padding: 10px 0;
+  font-size: 12pt;
+}
+.weui-label{
+  text-align: left;
+  width: 115px;
+}
+.btn1{
+  background-color: rgb(228,229,234) !important;
+  color: rgb(155,156,162) !important;
+  border-radius: 20px;
+}
+.btn2{
+   /* background-color: #1AAD19 !important;
+  color: rgb(255,255,255) !important; */
+  border-radius: 20px;
+
+}

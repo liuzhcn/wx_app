@@ -1,0 +1,35 @@
+/* pages/activity/meeting/meeting-xuanyan.wxss */
+.view{
+  position: relative;
+  width: 750rpx;
+}
+img{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.anniu_view{
+  width: 440rpx;
+  height: 320rpx;
+  position: absolute;
+  top: 730rpx;
+  text-align: left;
+  color: white;
+  padding-left: 100rpx;
+  padding-right: 400rpx;
+}
+.name_block{
+  display: inline-block;
+  padding: 5px;
+  color: white;
+}
+.zhiwen{
+  /* background-color: red; */
+  width: 120rpx;
+  height: 200rpx;
+  position: absolute;
+  top: 850rpx;
+  right: 100rpx;
+}
