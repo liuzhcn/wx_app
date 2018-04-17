@@ -41,6 +41,7 @@ App({
           getNameList: serverPath + "/wxapp/wxMeeting/getCnsName",//拿签到的名单
           fzbg: serverPath + "/wxapp/wxMeeting/fzbg",//发展报告
           hyyc: serverPath + "/wxapp/wxMeeting/hyyc",//会议议程
+          hyxc: serverPath + "/wxapp/wxMeeting/hyxc",//会议相册
         },
         qiandao:"",//是否签到
         sign:"",

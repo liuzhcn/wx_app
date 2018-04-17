@@ -43,7 +43,7 @@ Page({
         name: "会议相册",
         icon: "/images/huiyixiangce.png",
         type: "inner",
-        url: "",
+        url: "/pages/activity/meeting/meeting-xiangce",
         auth: true,
         style: "padding:20px 40px 20px 0"        
       },

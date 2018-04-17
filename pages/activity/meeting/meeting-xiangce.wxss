@@ -1,0 +1,4 @@
+/* pages/activity/meeting/meeting-xiangce.wxss */
+.size{
+  width: 750rpx;
+}

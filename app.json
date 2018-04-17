@@ -22,6 +22,7 @@
         "pages/activity/meeting/meeting-xuanyan",
         "pages/activity/meeting/meeting-baogao",
         "pages/activity/meeting/meeting-yicheng",
+        "pages/activity/meeting/meeting-xiangce",
 
         "pages/phone/phone",
         "pages/phoneList/phoneList",
