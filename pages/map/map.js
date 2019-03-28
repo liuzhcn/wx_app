@@ -117,7 +117,7 @@ Page({
           longitude: mapitems[i].jd,
           width: 1,
           height: 1,
-          alpha:0,
+          alpha:1,
           callout: {
             content: mapitems[i].name,
             color: "#FFFFFF",
