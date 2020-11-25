@@ -1,5 +1,5 @@
 //app.js
-const serverPath = "https://wxapp.ccnu.edu.cn";
+const serverPath = "https://itrc.jju.edu.cn/wxapp";
 App({
     onLaunch: function () {
 
@@ -55,15 +55,15 @@ App({
           "Content-Type": "application/x-www-form-urlencoded"
         }
         return headers;
-      }
+      },
     
     /** 九江学院数据*/
     // globalData: {
-    //     version: '1.2.1',
+    //     version: '1.3.6',
     //     userInfo: null,
     //     appUserInfo: null,
     //     token: null,
-    //     contextPath: 'https://small.sibetech.cn/wxapp',
+    //     contextPath: serverPath,
     //     mapPoint: {
     //         latitude: 29.710460,
     //         longitude: 115.995400
