@@ -1,69 +1,65 @@
 {
-    "pages": [
-        "pages/index/index",
-        "pages/map/map",        
-        "pages/logs/logs",
-        "pages/me/me",
-        "pages/apps/apps",
-
-        
-        "pages/mapDetail/mapDetail",
-
-        "pages/introduce/introduce",
-        "pages/regist/regist",
-        "pages/activity/small_target",
-        "pages/activity/test",
-        "pages/activity/spring",        
-        "pages/activity/spring_detail",
-
-        "pages/activity/meeting/meeting-baoming",
-        "pages/activity/meeting/meeting-qiandaoanniu",
-        "pages/activity/meeting/meeting-qiandao",    
-        "pages/activity/meeting/meeting-xuanyan",
-        "pages/activity/meeting/meeting-baogao",
-        "pages/activity/meeting/meeting-yicheng",
-        "pages/activity/meeting/meeting-xiangce",
-
-        "pages/phone/phone",
-        "pages/phoneList/phoneList",
-        "pages/phoneDetail/phoneDetail",
-        "pages/campusCard/campusCard",
-        "pages/checkBooks/checkBooks",
-        "pages/apps/webapp"
-    ],
-    "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#0093dc",
-        "navigationBarTitleText": "华中师范大学",
-        "navigationBarTextStyle": "white"
-    },
-    "tabBar": {
-        "selectedColor": "#000000",
-        "list": [
-            {
-                "pagePath": "pages/index/index",
-                "text": "认识华师",
-                "iconPath": "images/home.png",
-                "selectedIconPath": "images/home_selected.png"
-            },
-            {
-                "pagePath": "pages/apps/apps",
-                "text": "校园服务",
-                "iconPath": "images/app.png",
-                "selectedIconPath": "images/app_selected.png"
-            },
-            {
-                "pagePath": "pages/activity/spring",
-                "text": "校园活动",
-                "iconPath": "images/activity.png",
-                "selectedIconPath": "images/activity_selected.png"
-            },
-            {
-                "pagePath": "pages/me/me",
-                "text": "个人中心",
-                "iconPath": "images/me.png",
-                "selectedIconPath": "images/me_selected.png"
-            }
-        ]
-    }
+  "pages": [
+    "pages/index/index",
+    "pages/map/map",
+    "pages/logs/logs",
+    "pages/me/me",
+    "pages/apps/apps",
+    "pages/mapDetail/mapDetail",
+    "pages/introduce/introduce",
+    "pages/regist/regist",
+    "pages/activity/small_target",
+    "pages/activity/test",
+    "pages/activity/spring",
+    "pages/activity/spring_detail",
+    "pages/activity/meeting/meeting-baoming",
+    "pages/activity/meeting/meeting-qiandaoanniu",
+    "pages/activity/meeting/meeting-qiandao",
+    "pages/activity/meeting/meeting-xuanyan",
+    "pages/activity/meeting/meeting-baogao",
+    "pages/activity/meeting/meeting-yicheng",
+    "pages/activity/meeting/meeting-xiangce",
+    "pages/phone/phone",
+    "pages/phoneList/phoneList",
+    "pages/phoneDetail/phoneDetail",
+    "pages/campusCard/campusCard",
+    "pages/checkBooks/checkBooks",
+    "pages/apps/webapp"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0093dc",
+    "navigationBarTitleText": "华中师范大学",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "认识华师",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_selected.png"
+      },
+      {
+        "pagePath": "pages/apps/apps",
+        "text": "校园服务",
+        "iconPath": "images/app.png",
+        "selectedIconPath": "images/app_selected.png"
+      },
+      {
+        "pagePath": "pages/activity/spring",
+        "text": "校园活动",
+        "iconPath": "images/activity.png",
+        "selectedIconPath": "images/activity_selected.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "个人中心",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/me_selected.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
 }
