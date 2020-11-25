@@ -1,5 +1,6 @@
 //app.js
-const serverPath = "https://itrc.jju.edu.cn/wxapp";
+//const serverPath = "https://itrc.jju.edu.cn/wxapp";
+const serverPath = "https://wxapp.ccnu.edu.cn/wxapp";
 App({
     onLaunch: function () {
 
@@ -31,7 +32,7 @@ App({
         userInfo: null,
         appUserInfo: null,
         token: null,
-        contextPath:'https://wxapp.ccnu.edu.cn/wxapp',
+        contextPath: serverPath,
         api:{
           isQiandao: serverPath + "/wxapp/wxMeeting/getSign",//会议签到，判断是否签到
           jiangxaingList: serverPath + "/wxapp/wxMeeting/getAwardInfo",//拿奖项选项的列表
