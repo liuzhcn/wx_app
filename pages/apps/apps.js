@@ -14,10 +14,6 @@ Page({
         {
             id:'index',
             url: "/images/app-title.jpg"
-        },
-        {
-            id:'activity',
-            url:"/images/app-title-2.jpg"
         }
       ],
       
