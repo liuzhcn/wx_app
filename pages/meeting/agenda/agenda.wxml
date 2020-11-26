@@ -1,5 +1,5 @@
 <!--pages/meeting/agenda/agenda.wxml-->
 <view class="contain">
-  <image class="qidongye" src="/images/meeting/agenda.jpg" mode="widthFix" bindtap="onClick"></image>
+  <image class="qidongye" src="{{src}}" mode="widthFix" bindtap="onClick"></image>
 
 </view>

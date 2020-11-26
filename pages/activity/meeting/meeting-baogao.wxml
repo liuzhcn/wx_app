@@ -1,2 +1,7 @@
 <!--pages/activity/meeting/meeting-baogao.wxml-->
- <web-view class='size' src="{{url}}"></web-view> 
+<!-- <web-view class='size' src="{{url}}"></web-view>  -->
+<view style="padding:20px;">
+  <view wx:for="{{list}}" wx:key="{{item}}" bindtap="showPDF" data-item="{{item}}" style="padding:10px 0;">
+    {{item.filename}}
+  </view>
+</view>

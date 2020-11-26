@@ -6,7 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    url:""
+    url:"",
+    list:[]
   },
 
   /**
@@ -23,7 +24,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    this.getFileList();
   },
 
   /**
@@ -66,5 +67,49 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  showPDF(e){
+    let pdf_url = `${app.globalData.contextPath}/files/${e.currentTarget.dataset.item.filename}`;
+    debugger;
+    wx.showLoading({
+      title: '加载中...',
+    })
+    wx.downloadFile({
+      url: pdf_url,
+      success: function (res) {
+        console.log('downloadFile', res);
+        const filePath = res.tempFilePath
+        wx.openDocument({
+          filePath: filePath,
+          success: function (res) {
+            console.log(res);
+            console.log('打开文档成功')
+            wx.hideLoading()
+          },
+          fail: function (res) { 
+            console.log('打开失败')
+          },
+        })
+      }
+    })
+  },
+  getFileList(){
+    let _this = this;
+    wx.request({
+      url: `${app.globalData.contextPath}/api/security/getFiles`,
+      method: 'POST',
+      dataType: 'json',
+      success: function (res) {
+        console.log(res.data);
+        if (res.data.errcode == '0') {//说明已经签到了，直接进入四宫格界面
+           _this.setData({list:res.data.fileList})
+        } else {
+         
+        }
+      },
+      fail: function (res) {
+        console.log(res);
+       }
+    })
   }
 })

@@ -1,11 +1,12 @@
 // pages/meeting/agenda/agenda.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    src:`${app.globalData.contextPath}/static/images/hyyc.png`
   },
 
   /**
