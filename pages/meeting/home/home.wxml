@@ -1,0 +1,5 @@
+<!--pages/meeting/home/home.wxml-->
+<view class="contain">
+  <image class="backgroud" src="/images/meeting/meeting_home.jpg" mode="widthFix" bindtap="onClick"></image>
+
+</view>

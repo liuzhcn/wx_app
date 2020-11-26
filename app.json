@@ -1,5 +1,6 @@
 {
-  "pages": [   
+  "pages": [
+    "pages/meeting/home/home",
     "pages/index/index",
     "pages/logs/logs",
     "pages/me/me",
@@ -24,7 +25,10 @@
     "pages/campusCard/campusCard",
     "pages/checkBooks/checkBooks",
     "pages/apps/webapp",
-    "pages/map/map"
+    "pages/map/map",
+    "pages/meeting/index/index",
+    "pages/meeting/agenda/agenda",
+    "pages/meeting/photo/photo"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -36,8 +40,8 @@
     "selectedColor": "#000000",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "认识华师",
+        "pagePath": "pages/meeting/home/home",
+        "text": "党代会",
         "iconPath": "images/home.png",
         "selectedIconPath": "images/home_selected.png"
       },
@@ -48,8 +52,8 @@
         "selectedIconPath": "images/app_selected.png"
       },
       {
-        "pagePath": "pages/activity/spring",
-        "text": "校园活动",
+        "pagePath": "pages/introduce/introduce",
+        "text": "学校概况",
         "iconPath": "images/activity.png",
         "selectedIconPath": "images/activity_selected.png"
       },
