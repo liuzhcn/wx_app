@@ -1,1 +1,6 @@
-{}
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#D65636",
+  "navigationBarTitleText": "会议建言",
+  "navigationBarTextStyle": "white"
+}

@@ -1,4 +1,5 @@
 // pages/meeting/index.js
+const app = getApp()
 Page({
 
   /**
@@ -99,8 +100,15 @@ Page({
   openApp: function (e) {
     //打开
     let url = e.currentTarget.dataset.url;
-    wx.navigateTo({
-      url: url
-    })
+    if(e.currentTarget.dataset.auth && app.globalData.token){
+      wx.navigateTo({
+        url: url
+      })
+    }else{
+      wx.showToast({
+        icon:'none',
+        title: '请先绑定身份',
+      })
+    }
   },
 })

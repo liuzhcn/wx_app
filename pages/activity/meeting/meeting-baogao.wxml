@@ -1,7 +1,10 @@
 <!--pages/activity/meeting/meeting-baogao.wxml-->
 <!-- <web-view class='size' src="{{url}}"></web-view>  -->
-<view style="padding:20px;">
-  <view wx:for="{{list}}" wx:key="{{item}}" bindtap="showPDF" data-item="{{item}}" style="padding:10px 0;">
-    {{item.filename}}
+<view>
+  <image src="/images/meeting/meeting_bg.jpg" mode="sapectFit" style="width:750rpx;height:1664rpx;"></image>
+  <view class="contain">
+    <view wx:for="{{list}}" wx:key="{{item}}" bindtap="showPDF" data-item="{{item}}" class="a2">
+      <image src="/images/meeting/jx.png" mode="sapectFit" style="width:30rpx;height:30rpx;"></image> 文件{{index + 1}} : <text></text> {{item.filename}}
+    </view>
   </view>
 </view>

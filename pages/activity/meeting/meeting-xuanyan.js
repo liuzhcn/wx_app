@@ -9,6 +9,8 @@ Page({
         height: "",
         name: "",
         list: "",//已签到人的列表
+        hyjy:"",//会议建言
+        dis:false,//表单控件是否可用
     },
 
     /**
@@ -27,7 +29,7 @@ Page({
             complete: function (res) { },
         })
 
-        this.getxuanyan_list();//拿宣言列表
+        this.getjianyan();//拿建言列表
     },
 
     /**
@@ -78,25 +80,70 @@ Page({
     onShareAppMessage: function () {
 
     },
-    getxuanyan_list: function () {
+    getjianyan: function () {//获取建言列表
         let that = this;
         //请求名字列表，显示在目标区域
         wx.request({
-            url: app.globalData.api.getNameList,
+            url:`${app.globalData.contextPath}/api/security/getUserMsgList` ,
             method: 'POST',
+            header:app.getHeaderWithToken(),
+            data:{token:app.globalData.token},
             dataType: 'json',
             success: function (res) {
                 console.log(res.data);
                 if (res.data.errcode == '0') {
                     that.setData({
-                        list: res.data.nameStr
+                        hyjy: res.data.dataList[0].msg,
+                        dis:true
                     })
                 }
             },
             fail: function (res) { }
         })
-
-    },//长按宣言
+    },
+    inputText(e){
+        this.setData({
+            hyjy:e.detail.value
+        })
+    },
+    submit(){//提交宣言
+        let that = this;
+        //请求名字列表，显示在目标区域
+        let msg = this.data.hyjy;
+        if(!msg){
+            wx.showToast({
+                icon:'none',
+                title: '请填写宣言再提交',
+            })
+            return
+        }
+        wx.request({
+            url:`${app.globalData.contextPath}/api/security/saveUserMsg` ,
+            method: 'POST',
+            header:app.getHeaderWithToken(),
+            data:{msg:msg,token:app.globalData.token},
+            dataType: 'json',
+            success: function (res) {
+                console.log(res.data);
+                if (res.data.errcode == '0') {
+                    wx.showToast({
+                        icon:'none',
+                        title: '宣言提交成功！',
+                    })
+                    that.setData({
+                        dis:true
+                    })
+                }else{
+                    wx.showToast({
+                        icon:'none',
+                        title: res.data.errmsg,
+                    })
+                }
+            },
+            fail: function (res) { }
+        })
+    },
+    //长按宣言
     xuanyan: function () {
         let that = this;
 

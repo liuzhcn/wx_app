@@ -33,3 +33,28 @@ img{
   top: 850rpx;
   right: 100rpx;
 }
+.form-view{
+  position: absolute;
+  left: 100rpx;
+  right: 100rpx;
+  top: 400rpx;
+  border-radius: 20rpx;
+}
+.text-area-style{
+  width: 500rpx;
+  height: 150px;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.submit{
+  background-color:#D65636;
+  color: #fff;
+  margin-top: 20px;
+  width: 300rpx;
+  margin-top: 20px;
+  /* height: 150rpx; */
+}
+.btn-style{
+
+}

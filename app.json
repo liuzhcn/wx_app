@@ -40,16 +40,16 @@
     "selectedColor": "#000000",
     "list": [
       {
-        "pagePath": "pages/meeting/home/home",
-        "text": "党代会",
-        "iconPath": "images/home.png",
-        "selectedIconPath": "images/home_selected.png"
-      },
-      {
         "pagePath": "pages/apps/apps",
         "text": "校园服务",
         "iconPath": "images/app.png",
         "selectedIconPath": "images/app_selected.png"
+      },
+      {
+        "pagePath": "pages/meeting/home/home",
+        "text": "党代会",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_selected.png"
       },
       {
         "pagePath": "pages/introduce/introduce",

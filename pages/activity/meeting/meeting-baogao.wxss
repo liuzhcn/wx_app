@@ -2,3 +2,18 @@
 .size{
   width: 750rpx;
 }
+.contain{
+  width: 650rpx;
+  background-color: #fff;
+  color: #D65636;
+  padding: 40rpx;
+  box-sizing: border-box;
+  position: absolute;
+  left: 50rpx;
+  right: 50rpx;
+  top: 400rpx;
+}
+.a2{
+  border-bottom: 2px dashed #D65636;
+  padding:15px;
+}

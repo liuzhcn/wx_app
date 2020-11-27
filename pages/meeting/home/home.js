@@ -1,4 +1,5 @@
 // pages/meeting/home/home.js
+const app = getApp();
 Page({
 
   /**
@@ -12,7 +13,31 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+// 登录
+wx.login({
+  success: res => {
+      // 发送 res.code 到后台换取 openId, sessionKey, unionId
+      wx.request({
+          url: 'https://wxapp.ccnu.edu.cn/wxapp/wxUser/getUserInfo',
+          data: {
+              code: res.code
+          },
+          success: result => {
+              console.log(result.data);
 
+              if (result.data.errcode == '0') {
+                  getApp().globalData.token = result.data.token;
+                  getApp().globalData.appUserInfo = result.data.userInfo;
+              } else {
+                  getApp().globalData.token = null;
+                  getApp().globalData.appUserInfo = null;
+              }
+
+          }
+
+      })
+  }
+})
   },
 
   /**

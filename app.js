@@ -4,8 +4,6 @@
 const serverPath = "http://192.168.0.179:8080/wxapp_war_exploded";//测试
 App({
     onLaunch: function () {
-
-
         // 获取用户信息
         wx.getSetting({
             success: res => {
@@ -51,6 +49,14 @@ App({
             latitude: 30.517330,
             longitude: 114.360600,
         }
+      },
+      getHeaderWithToken: function () {
+        var headers = {
+          "Authorization": "Bearer " + this.globalData.token,
+          "Content-Type": "application/x-www-form-urlencoded",
+
+        }
+        return headers;
       },
       getHeader2: function () {
         var headers = {
