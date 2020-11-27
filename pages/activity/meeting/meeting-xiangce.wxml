@@ -1,2 +1,5 @@
 <!--pages/activity/meeting/meeting-xiangce.wxml-->
- <web-view class='size' src="{{url}}"></web-view>
+ <!-- <web-view class='size' src="{{url}}"></web-view> -->
+ <view>
+  <image src="/images/meeting/hyxc.png" mode="aspectFit" style="width:750rpx;height:1448rpx;"></image>
+ </view>
