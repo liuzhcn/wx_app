@@ -1,4 +1,5 @@
 // pages/regist/regist.js
+const app = getApp();
 Page({
 
     /**
@@ -18,7 +19,8 @@ Page({
             success: function (res) {
                 if (res.code) {
                     //发起网络请求
-                    path = 'https://wxapp.ccnu.edu.cn/wxapp/wxLogin/index?code=' + res.code;
+                    // path = 'https://wxapp.ccnu.edu.cn/wxapp/wxLogin/index?code=' + res.code;
+                    path = `${app.globalData.contextPath}/wxLogin/index?code=${res.code}`;
                     console.log(path);
                     that.setData({ url: path });
 
