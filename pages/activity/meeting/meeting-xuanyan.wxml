@@ -12,7 +12,8 @@
 		</view>
 	</view>
 	<view wx:if="{{dis}}" class="showText">
-		<view class="hyjy-text">您的会议建言：{{hyjy}}</view>
+		<!-- <view class="hyjy-text">您的会议建言：{{hyjy}}</view> -->
+		<view class="thanks-text">您已提交成功</view>
 		<view class="thanks-text">谢谢您的宝贵意见！</view>
 	</view>
 </view>
