@@ -1,14 +1,19 @@
 <view class='view'>
-  <!-- <image style='width:750rpx;height:{{height}}px' class='img' src='/images/xuanyan.jpg'></image> 
+	<!-- <image style='width:750rpx;height:{{height}}px' class='img' src='/images/xuanyan.jpg'></image> 
   <scroll-view scroll-y class='anniu_view'>{{list ? list :"暂无数据"}}</scroll-view>
   <view class='zhiwen' bindlongtap='xuanyan'></view> -->
-  <image src="/images/meeting/meeting_bg.jpg" mode="aspectFit" style="width:750rpx;height:1664rpx;"></image>
-  <view class="form-view">
-    <view>
-      <textarea value="{{hyjy}}" disabled="{{dis}}" bindinput="inputText" class="text-area-style"></textarea>
-    </view>
-   <view>
-    <button wx:if="{{!dis}}" bindtap="submit" class="submit" size="small" disabled="{{dis}}">提交</button>
-   </view>
-  </view>
+	<image src="/images/meeting/meeting_bg.jpg" mode="aspectFit" style="width:750rpx;height:1664rpx;"></image>
+	<view class="form-view" wx:if="{{!dis}}">
+		<view>
+			<textarea value="{{hyjy}}" disabled="{{dis}}" bindinput="inputText" class="text-area-style"></textarea>
+		</view>
+		<view>
+			<button wx:if="{{!dis}}" bindtap="submit" class="submit" size="small" disabled="{{dis}}">提交</button>
+		</view>
+	</view>
+	<view wx:if="{{dis}}" class="showText">
+		<!-- <view class="hyjy-text">您的会议建言：{{hyjy}}</view> -->
+		<view class="thanks-text">您已提交成功</view>
+		<view class="thanks-text">谢谢您的宝贵意见！</view>
+	</view>
 </view>

@@ -58,3 +58,20 @@ img{
 .btn-style{
 
 }
+.showText{
+  position: absolute;
+  left: 100rpx;
+  right: 100rpx;
+  top: 400rpx;
+}
+.thanks-text{
+  text-align: center;
+  padding:10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.hyjy-text{
+  font-size: 16px;
+  font-weight: normal;
+
+}

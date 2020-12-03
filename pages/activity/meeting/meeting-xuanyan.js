@@ -92,10 +92,15 @@ Page({
             success: function (res) {
                 console.log(res.data);
                 if (res.data.errcode == '0') {
-                    that.setData({
-                        hyjy: res.data.dataList[0].msg,
-                        dis:true
-                    })
+                    if(res.data.dataList.length>0){//已经评价过了
+                        that.setData({
+                            hyjy: res.data.dataList[0].msg,
+                            dis:true
+                        })
+                    }else{//未评价
+                        
+                    }
+                    
                 }
             },
             fail: function (res) { }

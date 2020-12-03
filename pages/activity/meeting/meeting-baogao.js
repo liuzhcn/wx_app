@@ -70,7 +70,8 @@ Page({
   },
   showPDF(e){
     let pdf_url = `${app.globalData.contextPath}/files/${e.currentTarget.dataset.item.filename}`;
-    debugger;
+    // debugger;
+    console.log(pdf_url)
     wx.showLoading({
       title: '加载中...',
     })
@@ -87,6 +88,7 @@ Page({
             wx.hideLoading()
           },
           fail: function (res) { 
+            wx.hideLoading()
             console.log('打开失败')
           },
         })
