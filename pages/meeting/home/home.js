@@ -91,7 +91,8 @@ wx.login({
 
   onClick: function(){
       wx.navigateTo({
-        url: '/pages/meeting/index/index'
+        url: '/pages/activity/meeting/meeting-baogao'
+        //pages/activity/meeting/meeting-baogao
       })
   }
 })

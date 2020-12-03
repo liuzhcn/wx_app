@@ -17,3 +17,6 @@
   border-bottom: 2px dashed #D65636;
   padding:15px;
 }
+.s{
+padding: 20px 10px;
+}

@@ -6,5 +6,6 @@
     <view wx:for="{{list}}" wx:key="{{item}}" bindtap="showPDF" data-item="{{item}}" class="a2">
       <image src="/images/meeting/jx.png" mode="sapectFit" style="width:30rpx;height:30rpx;"></image> 文件{{index + 1}} : <text></text> {{item.filename}}
     </view>
+      <navigator class="s" url="/pages/activity/meeting/meeting-xiangce">会议相册</navigator>
   </view>
 </view>
