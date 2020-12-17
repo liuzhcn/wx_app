@@ -89,7 +89,7 @@ Page({
         mask: true
       })
       wx.downloadFile({
-        url: url,
+        url: `${url}.${type}`,
         success: function (res) {
           console.log('downloadFile', res);
           wx.hideLoading();
@@ -103,6 +103,7 @@ Page({
             },
             fail: function (res) {
               wx.hideLoading()
+              console.log(res)
               console.log('打开文档失败')
             },
           })

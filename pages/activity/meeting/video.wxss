@@ -8,5 +8,5 @@
 }
 .video-style{
   width: 700rpx;
-  height: calc((700*9)rpx/16);
+  height: 393.75rpx;
 }
