@@ -93,7 +93,8 @@ Page({
         success: function (res) {
           console.log('downloadFile', res);
           wx.hideLoading();
-          const filePath = res.tempFilePath
+          const filePath = res.tempFilePath;
+          console.log(filePath)
           wx.openDocument({
             filePath: filePath,
             success: function (res) {
