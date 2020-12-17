@@ -3,9 +3,12 @@
 <view>
   <image src="/images/meeting/meeting_bg.jpg" mode="sapectFit" style="width:750rpx;height:1664rpx;"></image>
   <view class="contain">
-    <view wx:for="{{list}}" wx:key="{{item}}" bindtap="showPDF" data-item="{{item}}" class="a2">
-      <image src="/images/meeting/jx.png" mode="sapectFit" style="width:30rpx;height:30rpx;"></image> 文件{{index + 1}} : <text></text> {{item.filename}}
+    <view wx:for="{{list}}">
+      <view wx:if="{{item.filename !== '会议相册'}}" wx:key="{{item}}" bindtap="showPDF" data-item="{{item}}" class="a2">
+        <image src="/images/meeting/jx.png" mode="sapectFit" style="width:30rpx;height:30rpx;"></image> 文件
+        {{item.order}} : {{item.filename}}
+      </view>
+      <navigator wx:else class="s" url="/pages/activity/meeting/meeting-xiangce">会议相册</navigator>
     </view>
-      <navigator class="s" url="/pages/activity/meeting/meeting-xiangce">会议相册</navigator>
   </view>
 </view>

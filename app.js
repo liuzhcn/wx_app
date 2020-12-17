@@ -1,7 +1,7 @@
 //app.js
 //const serverPath = "https://itrc.jju.edu.cn/wxapp";//九江
-const serverPath = "https://wxapp.ccnu.edu.cn/wxapp";//华师
-// const serverPath = "http://192.168.0.179:8080/wxapp_war_exploded";//测试
+// const serverPath = "https://wxapp.ccnu.edu.cn/wxapp";//华师
+const serverPath = "http://192.168.0.180:8080/wxapp_war_exploded";//测试
 App({
     onLaunch: function () {
         // 获取用户信息
@@ -77,5 +77,4 @@ App({
     //         longitude: 115.995400
     //     }
     // }
-
 })

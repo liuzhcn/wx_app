@@ -5,3 +5,17 @@
   overflow: hidden;  
   position: fixed;
 } */
+.index-btn-area{
+  position: fixed;
+  bottom: 100rpx;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.index-btn{
+  width: 200rpx;
+  background-color:#D65636;
+  color: #fff;
+  font-weight: 600;
+  font-size: 36rpx;
+}

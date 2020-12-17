@@ -18,7 +18,7 @@ wx.login({
   success: res => {
       // 发送 res.code 到后台换取 openId, sessionKey, unionId
       wx.request({
-          url: 'https://wxapp.ccnu.edu.cn/wxapp/wxUser/getUserInfo',
+          url: `${app.globalData.contextPath}/wxUser/getUserInfo`,
           data: {
               code: res.code
           },

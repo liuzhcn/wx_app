@@ -1,0 +1,12 @@
+/* pages/activity/meeting/video.wxss */
+.video-contain{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.video-style{
+  width: 700rpx;
+  height: calc((700*9)rpx/16);
+}

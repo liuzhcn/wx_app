@@ -28,7 +28,8 @@
     "pages/map/map",
     "pages/meeting/index/index",
     "pages/meeting/agenda/agenda",
-    "pages/meeting/photo/photo"
+    "pages/meeting/photo/photo",
+    "pages/activity/meeting/video"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -39,7 +40,6 @@
   "tabBar": {
     "selectedColor": "#000000",
     "list": [
-     
       {
         "pagePath": "pages/meeting/home/home",
         "text": "党代会",

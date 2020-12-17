@@ -1,0 +1,4 @@
+<!--pages/activity/meeting/video.wxml-->
+<view class="video-contain">
+  <video wx:if="{{vdoPath}}" class="video-style" src="{{vdoPath}}"></video>
+</view>

@@ -1,5 +1,7 @@
 <!--pages/meeting/home/home.wxml-->
 <view class="contain">
-  <image class="backgroud" src="/images/meeting/meeting_home.jpg" mode="aspectFit" bindtap="onClick" style="width:750rpx;height:1270rpx;"></image>
-
+  <image class="backgroud" src="/images/meeting/bg2.jpg" mode="aspectFit"  style="width:750rpx;height:1327rpx;"></image>
+  <view class="index-btn-area">
+    <button class="index-btn" bindtap="onClick">点击进入</button>
+  </view>
 </view>
