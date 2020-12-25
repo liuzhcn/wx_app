@@ -27,7 +27,7 @@ App({
     },
     /**华中师范大学数据 */
       globalData: {
-        version: '1.3.3',
+        version: '1.4.1',
         userInfo: null,
         appUserInfo: null,
         token: null,

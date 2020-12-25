@@ -88,24 +88,42 @@ Page({
         title: '加载中...',
         mask: true
       })
+      const fileSystemManager = wx.getFileSystemManager();
       wx.downloadFile({
-        url: url,
+        url: `${url}.${type}`,
         success: function (res) {
           console.log('downloadFile', res);
           wx.hideLoading();
-          const filePath = res.tempFilePath
-          wx.openDocument({
-            filePath: filePath,
-            success: function (res) {
-              console.log(res);
-              console.log('打开文档成功')
-              wx.hideLoading()
-            },
-            fail: function (res) {
-              wx.hideLoading()
-              console.log('打开文档失败')
-            },
+        //  const filePath = res.tempFilePath;
+          let savePath = wx.env.USER_DATA_PATH + "/" + e.currentTarget.dataset.item.filename;
+          fileSystemManager.saveFile({
+            tempFilePath: res.tempFilePath,
+            filePath: savePath + "." + type,
+            success:function(res){
+              wx.openDocument({
+                filePath: res.savedFilePath,
+                fileType: type,
+                success:function(res){
+                  wx.hideLoading()
+                }
+              })
+            }
           })
+          // console.log(filePath)
+          // wx.openDocument({
+          //   filePath: filePath,
+          //   fileType: type,
+          //   success: function (res) {
+          //     console.log(res);
+          //     console.log('打开文档成功')
+          //     wx.hideLoading()
+          //   },
+          //   fail: function (res) {
+          //     wx.hideLoading()
+          //     console.log(res)
+          //     console.log('打开文档失败')
+          //   },
+          // })
         }
       })
     }
